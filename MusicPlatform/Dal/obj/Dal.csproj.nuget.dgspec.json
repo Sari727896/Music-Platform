@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Music_progect\\MusicPlatform\\Dal\\Dal.csproj": {}
+    "C:\\Users\\User\\Desktop\\project\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Music_progect\\MusicPlatform\\Dal\\Dal.csproj": {
+    "C:\\Users\\User\\Desktop\\project\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Music_progect\\MusicPlatform\\Dal\\Dal.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\project\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj",
         "projectName": "Dal",
-        "projectPath": "C:\\Users\\User\\Desktop\\Music_progect\\MusicPlatform\\Dal\\Dal.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\project\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Music_progect\\MusicPlatform\\Dal\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\project\\Music-Platform\\MusicPlatform\\Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

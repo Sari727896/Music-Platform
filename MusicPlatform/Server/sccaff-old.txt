@@ -1,0 +1,1 @@
+Scaffold-DbContext 'Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="D:\second year\c#\homework\lesson 9\Music\Dal\DB\Music.mdf";Integrated Security=True;Connect Timeout=30' Microsoft.EntityFrameworkCore.SqlServer –Context MusicContext -OutputDir Do -NoOnConfiguring -Force

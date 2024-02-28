@@ -21,45 +21,58 @@ namespace BL.BlImplementaion
 
         public Singer Add(Singer singer)
         {
-            return null;
+            Dal.Do.Singer singer1 = new();
+            singer1.FirstName = singer.FirstName;
+            singer1.LastName = singer.LastName;
+            singer1.Id = singer.Id;
+            singer1.Description = singer.Description;
+            singerRepo.Add(singer1);
+            return singer;
         }
 
-        public Singer Delete(int code)
+        public Singer Delete(int id)
         {
-            throw new NotImplementedException();
+            Dal.Do.Singer dalsinger = singerRepo.Delete(id);
+            Singer singer = new Singer();
+            singer.FirstName = dalsinger.FirstName;
+            singer.Id = dalsinger.Id;
+            singer.LastName = dalsinger.LastName;
+            singer.Description = dalsinger.Description;
+            return singer;
         }
-
         public List<Singer> GetAll()
         {
             List<Singer> list = new();
             var data = singerRepo.GetAll();
             foreach (var item in data)
             {
-                Singer singer = new ();
-                singer.Code=item.Code;
+                Singer singer = new();
                 singer.Id = item.Id;
                 singer.FirstName = item.FirstName;
                 singer.LastName = item.LastName;
-                singer.Description= item.Description;
+                singer.Description = item.Description;
                 list.Add(singer);
             }
             return list;
         }
-
-        public List<Song> GetSingerSongs(int singerCode)
+        public List<Song> GetSingerSongs(int singerId)
         {
-            var songs=songRepoBl.GetAll();
-            var singers=singerRepo.GetAll();
-            var singer = singers.Find(s => s.Code == singerCode);
+            var songs = songRepoBl.GetAll();
+            var singers = singerRepo.GetAll();
+            var singer = singers.Find(s => s.Id == singerId);
             if (singer == null)
                 return null;
-            var singerSong = songs.Where(s => s.SingerId == singerCode).ToList();
+            var singerSong = songs.Where(s => s.SingerId == singerId).ToList();
             return singerSong;
         }
-
-        public Singer Update(Singer something, int somethimgCode)
+        public Singer Update(Singer singer, int somethimgCode)
         {
-            throw new NotImplementedException();
+            Dal.Do.Singer dalsinger = new();
+            dalsinger.FirstName = singer.FirstName;
+            dalsinger.LastName = singer.LastName;
+            dalsinger.Description = singer.Description;
+            singerRepo.Update(dalsinger, somethimgCode);
+            return singer;
         }
     }
 }

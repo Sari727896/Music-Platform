@@ -8,9 +8,7 @@ namespace BL.Bo
 {
     public class Singer
     {
-        public int Code { get; set; }
-
-        public string Id { get; set; } = null!;
+        public int Id { get; set; } 
 
         public string FirstName { get; set; } = null!;
 

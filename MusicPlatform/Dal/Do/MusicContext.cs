@@ -112,17 +112,15 @@ public partial class MusicContext : DbContext
 
         modelBuilder.Entity<Singer>(entity =>
         {
-            entity.HasKey(e => e.Code).HasName("PK__Singer__A25C5AA6D87DBC5D");
+            entity.HasKey(e => e.Id).HasName("PK__Singer__A25C5AA6D87DBC5D");
 
             entity.ToTable("Singer");
 
             entity.Property(e => e.FirstName).HasMaxLength(50);
-            entity.Property(e => e.Id).HasMaxLength(10);
             entity.Property(e => e.LastName).HasMaxLength(50);
 
             entity.HasOne(d => d.City).WithMany(p => p.Singers)
                 .HasForeignKey(d => d.CityId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_SingerCity");
         });
 

@@ -28,9 +28,9 @@ namespace Dal.Dalimplementaion
             musicContext.SaveChanges();
             return Singer;
         }
-        public Singer Update(Singer Singer, int code)
+        public Singer Update(Singer Singer, int id)
         {
-            Singer SingerToUpdate = musicContext.Singers.FirstOrDefault(s => s.Code == code);
+            Singer SingerToUpdate = musicContext.Singers.FirstOrDefault(s => s.Id == id);
             if (SingerToUpdate != null)
             {
                 SingerToUpdate.Age = Singer.Age;
@@ -39,9 +39,9 @@ namespace Dal.Dalimplementaion
             }
             return null;
         }
-        public Singer Delete(int code)
+        public Singer Delete(int id)
         {
-            Singer SingerToDelete = musicContext.Singers.FirstOrDefault(p => p.Code == code);
+            Singer SingerToDelete = musicContext.Singers.FirstOrDefault(p => p.Id == id);
             if (SingerToDelete != null)
             {
                 musicContext.Singers.Remove(SingerToDelete);
@@ -49,8 +49,6 @@ namespace Dal.Dalimplementaion
                 return SingerToDelete;
             }
             return null;
-        }
-
-        
+        }     
     }
 }
