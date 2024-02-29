@@ -18,9 +18,9 @@ namespace BL.Bo
 
         public DateTime PublicationDate { get; set; }
         //בעיה בגלל משתנה מסוג הdal;
-        public Composer Composer { get; set; } = null!;
+        //public Composer Composer { get; set; } = null!;
 
-        public Processor Processor { get; set; } = null!;
-        public Singer SongSinger { get; set; } = null!;
+        //public Processor Processor { get; set; } = null!;
+        //public Singer SongSinger { get; set; } = null!;
     }
 }
