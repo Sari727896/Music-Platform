@@ -7,7 +7,7 @@ public partial class Album
 {
     public int Code { get; set; }
 
-    public string Name { get; set; } = null!;
+    public string Name { get; set; }
 
     public DateTime? PublicationDate { get; set; }
 

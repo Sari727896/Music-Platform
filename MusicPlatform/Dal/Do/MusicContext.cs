@@ -27,6 +27,8 @@ public partial class MusicContext : DbContext
 
     public virtual DbSet<Song> Songs { get; set; }
 
+    public virtual DbSet<Subscriber> Subscribers { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Album>(entity =>
@@ -35,7 +37,9 @@ public partial class MusicContext : DbContext
 
             entity.ToTable("Album");
 
-            entity.Property(e => e.Name).HasMaxLength(50);
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
             entity.Property(e => e.PublicationDate).HasColumnType("date");
         });
 
@@ -45,7 +49,9 @@ public partial class MusicContext : DbContext
 
             entity.ToTable("City");
 
-            entity.Property(e => e.Name).HasMaxLength(50);
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
 
             entity.HasOne(d => d.Country).WithMany(p => p.Cities)
                 .HasForeignKey(d => d.CountryId)
@@ -59,11 +65,16 @@ public partial class MusicContext : DbContext
 
             entity.ToTable("Composer");
 
-            entity.Property(e => e.FirstName).HasMaxLength(50);
+            entity.Property(e => e.FirstName)
+                .IsRequired()
+                .HasMaxLength(50);
             entity.Property(e => e.Id)
+                .IsRequired()
                 .HasMaxLength(10)
                 .HasColumnName("ID");
-            entity.Property(e => e.LastName).HasMaxLength(50);
+            entity.Property(e => e.LastName)
+                .IsRequired()
+                .HasMaxLength(50);
 
             entity.HasOne(d => d.City).WithMany(p => p.Composers)
                 .HasForeignKey(d => d.CityId)
@@ -77,7 +88,9 @@ public partial class MusicContext : DbContext
 
             entity.ToTable("Country");
 
-            entity.Property(e => e.Name).HasMaxLength(50);
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
         });
 
         modelBuilder.Entity<Processor>(entity =>
@@ -86,11 +99,16 @@ public partial class MusicContext : DbContext
 
             entity.ToTable("Processor");
 
-            entity.Property(e => e.FirstName).HasMaxLength(50);
+            entity.Property(e => e.FirstName)
+                .IsRequired()
+                .HasMaxLength(50);
             entity.Property(e => e.Id)
+                .IsRequired()
                 .HasMaxLength(10)
                 .HasColumnName("ID");
-            entity.Property(e => e.LastName).HasMaxLength(50);
+            entity.Property(e => e.LastName)
+                .IsRequired()
+                .HasMaxLength(50);
 
             entity.HasOne(d => d.City).WithMany(p => p.Processors)
                 .HasForeignKey(d => d.CityId)
@@ -116,8 +134,12 @@ public partial class MusicContext : DbContext
 
             entity.ToTable("Singer");
 
-            entity.Property(e => e.FirstName).HasMaxLength(50);
-            entity.Property(e => e.LastName).HasMaxLength(50);
+            entity.Property(e => e.FirstName)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.LastName)
+                .IsRequired()
+                .HasMaxLength(50);
 
             entity.HasOne(d => d.City).WithMany(p => p.Singers)
                 .HasForeignKey(d => d.CityId)
@@ -130,10 +152,16 @@ public partial class MusicContext : DbContext
 
             entity.ToTable("Song");
 
-            entity.Property(e => e.Description).HasMaxLength(50);
-            entity.Property(e => e.Name).HasMaxLength(50);
+            entity.Property(e => e.Description)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
             entity.Property(e => e.PublicationDate).HasColumnType("date");
-            entity.Property(e => e.TheSongWriter).HasMaxLength(50);
+            entity.Property(e => e.TheSongWriter)
+                .IsRequired()
+                .HasMaxLength(50);
 
             entity.HasOne(d => d.Album).WithMany(p => p.Songs)
                 .HasForeignKey(d => d.AlbumId)
@@ -153,6 +181,22 @@ public partial class MusicContext : DbContext
                 .HasForeignKey(d => d.SingerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_SongSinger");
+        });
+
+        modelBuilder.Entity<Subscriber>(entity =>
+        {
+            entity.HasKey(e => e.Code).HasName("PK__Subscrib__A25C5AA68405B65D");
+
+            entity.Property(e => e.FirstName)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.Id)
+                .IsRequired()
+                .HasMaxLength(10)
+                .HasColumnName("ID");
+            entity.Property(e => e.LastName)
+                .IsRequired()
+                .HasMaxLength(50);
         });
 
         OnModelCreatingPartial(modelBuilder);
