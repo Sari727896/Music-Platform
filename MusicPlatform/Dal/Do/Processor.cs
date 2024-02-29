@@ -7,17 +7,17 @@ public partial class Processor
 {
     public int Code { get; set; }
 
-    public string Id { get; set; } = null!;
+    public string Id { get; set; }
 
-    public string FirstName { get; set; } = null!;
+    public string FirstName { get; set; }
 
-    public string LastName { get; set; } = null!;
+    public string LastName { get; set; }
 
     public int Age { get; set; }
 
     public int CityId { get; set; }
 
-    public virtual City City { get; set; } = null!;
+    public virtual City City { get; set; }
 
     public virtual ICollection<Song> Songs { get; set; } = new List<Song>();
 }

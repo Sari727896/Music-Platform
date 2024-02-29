@@ -13,5 +13,5 @@ public partial class Rating
 
     public int SongId { get; set; }
 
-    public virtual Song Song { get; set; } = null!;
+    public virtual Song Song { get; set; }
 }
