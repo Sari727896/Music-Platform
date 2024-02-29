@@ -1,5 +1,6 @@
 ﻿using Dal.DalApi;
 using Dal.Do;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,23 +18,23 @@ namespace Dal.Dalimplementaion
         }
         public List<Singer> GetAll()
         {
-            IEnumerable<Singer> Singers = musicContext.Singers;
+            IEnumerable<Singer> singers = musicContext.Singers;
             //if (Singers == null)
             //    return null;
-            return Singers.ToList();
+            return singers.ToList();
         }
-        public Singer Add(Singer Singer)
+        public Singer Add(Singer singer)
         {
-            musicContext.Singers.Add(Singer);
+            musicContext.Singers.Add(singer);
             musicContext.SaveChanges();
-            return Singer;
+            return singer;
         }
-        public Singer Update(Singer Singer, int id)
+        public Singer Update(Singer singer, int singerId)
         {
-            Singer SingerToUpdate = musicContext.Singers.FirstOrDefault(s => s.Id == id);
+            Singer SingerToUpdate = musicContext.Singers.FirstOrDefault(s => s.Id == singerId);
             if (SingerToUpdate != null)
             {
-                SingerToUpdate.Age = Singer.Age;
+                SingerToUpdate.Age = singer.Age;
                 musicContext.SaveChanges();
                 return SingerToUpdate;
             }
@@ -41,12 +42,12 @@ namespace Dal.Dalimplementaion
         }
         public Singer Delete(int id)
         {
-            Singer SingerToDelete = musicContext.Singers.FirstOrDefault(p => p.Id == id);
-            if (SingerToDelete != null)
+            Singer singerToDelete = musicContext.Singers.FirstOrDefault(p => p.Id == id);
+            if (singerToDelete != null)
             {
-                musicContext.Singers.Remove(SingerToDelete);
+                musicContext.Singers.Remove(singerToDelete);
                 musicContext.SaveChanges();
-                return SingerToDelete;
+                return singerToDelete;
             }
             return null;
         }     

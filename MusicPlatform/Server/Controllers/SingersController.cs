@@ -39,18 +39,30 @@ namespace Server.Controllers
             ISingerRepoBl.Add(singer);
             return singer;
         }
-        [HttpPut("{SingerId}")]
-        public ActionResult<Singer> UpdatePatient(Singer singer, int singerId)
+     
+        [HttpPut("{singerId}")]
+        public ActionResult<Singer> UpdateSinger([FromRoute] int singerId, [FromBody] Singer singer)
         {
             if (singer == null)
             {
                 return BadRequest();
             }
-            if (singerId == null || singerId < 0)
+
+            if (singerId < 0)
             {
                 return BadRequest();
             }
+
             return ISingerRepoBl.Update(singer, singerId);
+        }
+        [HttpDelete("{code}")]
+        public ActionResult<Singer> DeletePatient(int code)
+        {
+            if (code < 0)
+            {
+                return BadRequest();
+            }
+            return ISingerRepoBl.Delete(code);
         }
     }
 }

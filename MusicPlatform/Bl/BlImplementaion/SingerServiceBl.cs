@@ -22,6 +22,7 @@ namespace BL.BlImplementaion
         public Singer Add(Singer singer)
         {
             Dal.Do.Singer singer1 = new();
+            singer1.Age= singer.Age;
             singer1.FirstName = singer.FirstName;
             singer1.LastName = singer.LastName;
             singer1.Id = singer.Id;
@@ -38,6 +39,7 @@ namespace BL.BlImplementaion
             singer.Id = dalsinger.Id;
             singer.LastName = dalsinger.LastName;
             singer.Description = dalsinger.Description;
+            singer.Age = dalsinger.Age;
             return singer;
         }
         public List<Singer> GetAll()
@@ -48,6 +50,7 @@ namespace BL.BlImplementaion
             {
                 Singer singer = new();
                 singer.Id = item.Id;
+                singer.Age = item.Age;
                 singer.FirstName = item.FirstName;
                 singer.LastName = item.LastName;
                 singer.Description = item.Description;
@@ -65,13 +68,14 @@ namespace BL.BlImplementaion
             var singerSong = songs.Where(s => s.SingerId == singerId).ToList();
             return singerSong;
         }
-        public Singer Update(Singer singer, int somethimgCode)
+        public Singer Update(Singer singer, int singerId)
         {
             Dal.Do.Singer dalsinger = new();
             dalsinger.FirstName = singer.FirstName;
             dalsinger.LastName = singer.LastName;
             dalsinger.Description = singer.Description;
-            singerRepo.Update(dalsinger, somethimgCode);
+            dalsinger.Age= singer.Age;
+            singerRepo.Update(dalsinger, singerId);
             return singer;
         }
     }

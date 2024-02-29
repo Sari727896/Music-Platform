@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dal.Do;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,13 @@ namespace BL.Bo
         public string Name { get; set; } = null!;
 
         public int SingerId { get; set; }
+        public string SingerName { get; set; }
 
         public DateTime PublicationDate { get; set; }
+        //בעיה בגלל משתנה מסוג הdal;
+        public Composer Composer { get; set; } = null!;
+
+        public Processor Processor { get; set; } = null!;
+        public Singer SongSinger { get; set; } = null!;
     }
 }

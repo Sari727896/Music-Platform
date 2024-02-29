@@ -6,8 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dal.Do;
 using Dal.DalApi;
-
-
+using Microsoft.EntityFrameworkCore;
 
 namespace Dal.Dalimplementaion
 {
@@ -20,7 +19,7 @@ namespace Dal.Dalimplementaion
         }
         public List<Song> GetAll()
         {
-            IEnumerable<Song> songs = musicContext.Songs;
+            IEnumerable<Song> songs = musicContext.Songs.Include(s=>s.Singer);
             //if (songs == null)
             //    return null;
             return songs.ToList();

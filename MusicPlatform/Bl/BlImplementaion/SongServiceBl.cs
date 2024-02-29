@@ -1,15 +1,18 @@
 ﻿using BL.BlApi;
 using BL.Bo;
 using Dal.DalApi;
+using Dal.Dalimplementaion;
+using Dal.Do;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BL.BlImplementaion
 {
-    public class SongServiceBl :ISongRepoBl
+    public class SongServiceBl : ISongRepoBl
     {
         ISongRepoDal songRepo;
         public SongServiceBl(ISongRepoDal songRepo)
@@ -17,44 +20,62 @@ namespace BL.BlImplementaion
             this.songRepo = songRepo;
         }
 
-        public Song Add(Song something)
+
+        public Bo.Song Add(Bo.Song song)
         {
-            throw new NotImplementedException();
+            Dal.Do.Song song1 = new();
+            song1.Id = song.Id;
+            song1.Name = song.Name;
+            song1.SingerId = song.SingerId;
+            song1.PublicationDate = song.PublicationDate;
+            //song1.Processor=song.Processor;
+            //song1.Composer=song.Composer;
+            //song1.Singer.FirstName = song.SongSinger.FirstName;
+            //song1.Singer.LastName = song.SongSinger.LastName;
+            songRepo.Add(song1);
+            return song;
         }
 
-        public Song Delete(int code)
+        public Bo.Song Delete(int code)
         {
-            throw new NotImplementedException();
+            Dal.Do.Song dalsong= songRepo.Delete(code);
+            Bo.Song song= new();
+            song.Id = dalsong.Id;
+            song.Name = dalsong.Name;
+            song.SingerId = dalsong.SingerId;
+            song.PublicationDate = dalsong.PublicationDate;
+            song.SingerName = dalsong.Singer.FirstName + " " + dalsong.Singer.LastName;
+            return song;
         }
 
-        public List<Song> GetAll()
+        public List<Bo.Song> GetAll()
         {
-            List<Song> list = new();
+            List<Bo.Song> list = new();
             var data = songRepo.GetAll();
-            foreach(var item in data)
+            foreach (var item in data)
             {
-                Song song = new Song();
+                Bo.Song song = new ();
                 song.Id = item.Id;
                 song.Name = item.Name;
                 song.SingerId = item.SingerId;
                 song.PublicationDate = item.PublicationDate;
+                song.SingerName = item.Singer.FirstName + " " + item.Singer.LastName;
                 list.Add(song);
             }
             return list;
         }
-        public Song GetPublicationSong()
+        public Bo.Song GetPublicationSong()
         {
             DateTime lastDate = DateTime.MinValue;
             var data = songRepo.GetAll();
-            Song lastSong = new();
+            Bo.Song lastSong = new();
             foreach (var item in data)
             {
                 if (item.PublicationDate > lastDate)
                 {
                     lastDate = item.PublicationDate;
-               
                     lastSong.Id = item.Id;
-                    lastSong.Name=item.Name;
+                    lastSong.Name = item.Name;
                     lastSong.SingerId = item.SingerId;
                     lastSong.PublicationDate = item.PublicationDate;
                 }
@@ -62,9 +83,16 @@ namespace BL.BlImplementaion
             return lastSong;
         }
 
-        public Song Update(Song something, int somethimgCode)
+        public Bo.Song Update(Bo.Song song, int songCode)
         {
-            throw new NotImplementedException();
+            Dal.Do.Song dalsong = new();
+            dalsong.SingerId = song.SingerId;
+            dalsong.PublicationDate = song.PublicationDate;
+            dalsong.Id= songCode;
+            dalsong.Name=song.Name;  
+            songRepo.Update(dalsong, songCode);
+            return song;
         }
+  
     }
 }
