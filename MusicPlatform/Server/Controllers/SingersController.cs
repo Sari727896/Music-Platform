@@ -8,26 +8,26 @@ namespace Server.Controllers
     public class SingersController : BaseController
     {
 
-        ISingerRepoBl ISingerRepoBl;
-        public SingersController(ISingerRepoBl ISingerRepoBl)
+        ISingerRepoBl SingerRepoBl;
+        public SingersController(ISingerRepoBl SingerRepoBl)
         {
-            this.ISingerRepoBl = ISingerRepoBl;
+            this.SingerRepoBl = SingerRepoBl;
         }
         [HttpGet]
         public ActionResult<List<Singer>> GetSingers()
         {
-            if (ISingerRepoBl.GetAll() == null)
+            if (SingerRepoBl.GetAll() == null)
                 return NotFound();
-            return ISingerRepoBl.GetAll();
+            return SingerRepoBl.GetAll();
         }
         [HttpGet("{SingerId}")]
         public ActionResult<List<Song>> GetSingersSong(int SingerId)
         {
-            if (ISingerRepoBl.GetSingerSongs(SingerId) == null)
+            if (SingerRepoBl.GetSingerSongs(SingerId) == null)
             {
                 return NotFound();
             }
-            return ISingerRepoBl.GetSingerSongs(SingerId);
+            return SingerRepoBl.GetSingerSongs(SingerId);
         }
         [HttpPost]
         public ActionResult<Singer> AddSinger(Singer singer)
@@ -36,7 +36,7 @@ namespace Server.Controllers
             {
                 return BadRequest();
             }
-            ISingerRepoBl.Add(singer);
+            SingerRepoBl.Add(singer);
             return singer;
         }
      
@@ -53,7 +53,7 @@ namespace Server.Controllers
                 return BadRequest();
             }
 
-            return ISingerRepoBl.Update(singer, singerId);
+            return SingerRepoBl.Update(singer, singerId);
         }
         [HttpDelete("{code}")]
         public ActionResult<Singer> DeletePatient(int code)
@@ -62,7 +62,7 @@ namespace Server.Controllers
             {
                 return BadRequest();
             }
-            return ISingerRepoBl.Delete(code);
+            return SingerRepoBl.Delete(code);
         }
     }
 }

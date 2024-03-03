@@ -14,7 +14,7 @@ namespace BL.Bo
         public string Name { get; set; } = null!;
 
         public int SingerId { get; set; }
-        public string SingerName { get; set; }
+        //public string SingerName { get; set; }
 
         public DateTime PublicationDate { get; set; }
         //בעיה בגלל משתנה מסוג הdal;

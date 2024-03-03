@@ -1,4 +1,5 @@
-﻿using BL.BlApi;
+﻿using AutoMapper;
+using BL.BlApi;
 using BL.Bo;
 using Dal.DalApi;
 using Dal.Dalimplementaion;
@@ -15,25 +16,21 @@ namespace BL.BlImplementaion
     public class SongServiceBl : ISongRepoBl
     {
         ISongRepoDal songRepo;
-        public SongServiceBl(ISongRepoDal songRepo)
+        IMapper mapper;
+        public SongServiceBl(ISongRepoDal songRepo, IMapper mapper)
         {
             this.songRepo = songRepo;
+            this.mapper = mapper;
         }
 
 
         public Bo.Song Add(Bo.Song song)
         {
-            Dal.Do.Song song1 = new();
-            song1.Id = song.Id;
-            song1.Name = song.Name;
-            song1.SingerId = song.SingerId;
-            song1.PublicationDate = song.PublicationDate;
-            //song1.Processor=song.Processor;
-            //song1.Composer=song.Composer;
-            //song1.Singer.FirstName = song.SongSinger.FirstName;
-            //song1.Singer.LastName = song.SongSinger.LastName;
-            songRepo.Add(song1);
-            return song;
+
+            Dal.Do.Song dalsong=mapper.Map<Dal.Do.Song>(song);
+            Dal.Do.Song addsong = songRepo.Add(dalsong);
+            Bo.Song addedBoSong = mapper.Map<Bo.Song>(addsong);
+            return addedBoSong;
         }
 
         public Bo.Song Delete(int code)
@@ -44,7 +41,7 @@ namespace BL.BlImplementaion
             song.Name = dalsong.Name;
             song.SingerId = dalsong.SingerId;
             song.PublicationDate = dalsong.PublicationDate;
-            song.SingerName = dalsong.Singer.FirstName + " " + dalsong.Singer.LastName;
+            //song.SingerName = dalsong.Singer.FirstName + " " + dalsong.Singer.LastName;
             return song;
         }
 
@@ -59,7 +56,7 @@ namespace BL.BlImplementaion
                 song.Name = item.Name;
                 song.SingerId = item.SingerId;
                 song.PublicationDate = item.PublicationDate;
-                song.SingerName = item.Singer.FirstName + " " + item.Singer.LastName;
+                //song.SingerName = item.Singer.FirstName + " " + item.Singer.LastName;
                 list.Add(song);
             }
             return list;

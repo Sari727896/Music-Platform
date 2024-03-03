@@ -238,3 +238,5 @@ C:\Users\User\Desktop\Music Progect c#\Music-Platform\MusicPlatform\Server\obj\D
 C:\Users\User\Desktop\Music Progect c#\Music-Platform\MusicPlatform\Server\obj\Debug\net7.0\Server.pdb
 C:\Users\User\Desktop\Music Progect c#\Music-Platform\MusicPlatform\Server\obj\Debug\net7.0\Server.genruntimeconfig.cache
 C:\Users\User\Desktop\Music Progect c#\Music-Platform\MusicPlatform\Server\obj\Debug\net7.0\ref\Server.dll
+C:\Users\User\Desktop\Music Progect c#\Music-Platform\MusicPlatform\Server\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\User\Desktop\Music Progect c#\Music-Platform\MusicPlatform\Server\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -7,7 +7,8 @@ using Dal;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
+//לעשות את זה בconfigure sevices
+builder.Services.AddAutoMapper(typeof(Program));
 // Add services to the container.
 
 builder.Services.AddControllers();
