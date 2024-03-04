@@ -8,26 +8,26 @@ namespace Server.Controllers
   
     public class SongsController : BaseController
     {
-        ISongRepoBl ISongRepoBl;
-        public SongsController(ISongRepoBl ISongRepoBl)
+        ISongRepoBl songRepoBl;
+        public SongsController(ISongRepoBl songRepoBl)
         {
-            this.ISongRepoBl = ISongRepoBl;
+            this.songRepoBl = songRepoBl;
         }
         [HttpGet("api/songs")]
         public ActionResult<List<Song>> Get()
         {
-            if (ISongRepoBl.GetAll() == null)
+            if (songRepoBl.GetAll() == null)
                 return NotFound();
-            return ISongRepoBl.GetAll();
+            return songRepoBl.GetAll();
         }
         [HttpGet("api/publication-song")]
         public ActionResult<Song> GetPublicationSong()
         {
-            if(ISongRepoBl.GetPublicationSong == null)
+            if(songRepoBl.GetPublicationSong == null)
             {
                 return NotFound();
             }
-            return ISongRepoBl.GetPublicationSong();
+            return songRepoBl.GetPublicationSong();
         }
         [HttpPost]
         public ActionResult<Song> AddSong(Song song)
@@ -36,7 +36,7 @@ namespace Server.Controllers
             {
                 return BadRequest();
             }
-            ISongRepoBl.Add(song);
+            songRepoBl.Add(song);
             return song;
         }
         [HttpPut("{songId}")]
@@ -52,7 +52,7 @@ namespace Server.Controllers
                 return BadRequest();
             }
 
-            return ISongRepoBl.Update(song, songId);
+            return songRepoBl.Update(song, songId);
         }
         [HttpDelete("{code}")]
         public ActionResult<Song> DeleteSong(int code)
@@ -61,7 +61,7 @@ namespace Server.Controllers
             {
                 return BadRequest();
             }
-            return ISongRepoBl.Delete(code);
+            return songRepoBl.Delete(code);
         }
     }
 }

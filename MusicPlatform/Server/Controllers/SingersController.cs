@@ -8,26 +8,26 @@ namespace Server.Controllers
     public class SingersController : BaseController
     {
 
-        ISingerRepoBl SingerRepoBl;
-        public SingersController(ISingerRepoBl SingerRepoBl)
+        ISingerRepoBl singerRepoBl;
+        public SingersController(ISingerRepoBl singerRepoBl)
         {
-            this.SingerRepoBl = SingerRepoBl;
+            this.singerRepoBl = singerRepoBl;
         }
         [HttpGet]
         public ActionResult<List<Singer>> GetSingers()
         {
-            if (SingerRepoBl.GetAll() == null)
+            if (singerRepoBl.GetAll() == null)
                 return NotFound();
-            return SingerRepoBl.GetAll();
+            return singerRepoBl.GetAll();
         }
         [HttpGet("{SingerId}")]
         public ActionResult<List<Song>> GetSingersSong(int SingerId)
         {
-            if (SingerRepoBl.GetSingerSongs(SingerId) == null)
+            if (singerRepoBl.GetSingerSongs(SingerId) == null)
             {
                 return NotFound();
             }
-            return SingerRepoBl.GetSingerSongs(SingerId);
+            return singerRepoBl.GetSingerSongs(SingerId);
         }
         [HttpPost]
         public ActionResult<Singer> AddSinger(Singer singer)
@@ -36,7 +36,7 @@ namespace Server.Controllers
             {
                 return BadRequest();
             }
-            SingerRepoBl.Add(singer);
+            singerRepoBl.Add(singer);
             return singer;
         }
      
@@ -53,16 +53,16 @@ namespace Server.Controllers
                 return BadRequest();
             }
 
-            return SingerRepoBl.Update(singer, singerId);
+            return singerRepoBl.Update(singer, singerId);
         }
         [HttpDelete("{code}")]
-        public ActionResult<Singer> DeletePatient(int code)
+        public ActionResult<Singer> DeleteSinger(int code)
         {
             if (code < 0)
             {
                 return BadRequest();
             }
-            return SingerRepoBl.Delete(code);
+            return singerRepoBl.Delete(code);
         }
     }
 }
