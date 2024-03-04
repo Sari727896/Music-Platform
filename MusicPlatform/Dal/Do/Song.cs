@@ -9,27 +9,23 @@ public partial class Song
 
     public string Name { get; set; }
 
-    public int SingerId { get; set; }
-
     public int? AlbumId { get; set; }
 
     public string TheSongWriter { get; set; }
-
-    public int ComposerId { get; set; }
-
-    public int ProcessorId { get; set; }
 
     public string Description { get; set; }
 
     public DateTime PublicationDate { get; set; }
 
+    public string ComposerName { get; set; }
+
+    public string ProcessorName { get; set; }
+
     public virtual Album Album { get; set; }
-
-    public virtual Composer Composer { get; set; }
-
-    public virtual Processor Processor { get; set; }
 
     public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
 
-    public virtual Singer Singer { get; set; }
+    public virtual ICollection<SingerSong> SingerSongs { get; set; } = new List<SingerSong>();
+
+    public virtual ICollection<SubscriberSong> SubscriberSongs { get; set; } = new List<SubscriberSong>();
 }

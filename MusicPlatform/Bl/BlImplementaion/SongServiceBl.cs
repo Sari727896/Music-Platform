@@ -27,7 +27,7 @@ namespace BL.BlImplementaion
         public Bo.Song Add(Bo.Song song)
         {
 
-            Dal.Do.Song dalsong=mapper.Map<Dal.Do.Song>(song);
+            Dal.Do.Song dalsong = mapper.Map<Dal.Do.Song>(song);
             Dal.Do.Song addsong = songRepo.Add(dalsong);
             Bo.Song addedBoSong = mapper.Map<Bo.Song>(addsong);
             return addedBoSong;
@@ -35,8 +35,8 @@ namespace BL.BlImplementaion
 
         public Bo.Song Delete(int code)
         {
-            Dal.Do.Song dalsong= songRepo.Delete(code);
-            Bo.Song song= new();
+            Dal.Do.Song dalsong = songRepo.Delete(code);
+            Bo.Song song = new();
             song.Id = dalsong.Id;
             song.Name = dalsong.Name;
             song.SingerId = dalsong.SingerId;
@@ -51,7 +51,7 @@ namespace BL.BlImplementaion
             var data = songRepo.GetAll();
             foreach (var item in data)
             {
-                Bo.Song song = new ();
+                Bo.Song song = new();
                 song.Id = item.Id;
                 song.Name = item.Name;
                 song.SingerId = item.SingerId;
@@ -85,11 +85,11 @@ namespace BL.BlImplementaion
             Dal.Do.Song dalsong = new();
             dalsong.SingerId = song.SingerId;
             dalsong.PublicationDate = song.PublicationDate;
-            dalsong.Id= songCode;
-            dalsong.Name=song.Name;  
+            dalsong.Id = songCode;
+            dalsong.Name = song.Name;
             songRepo.Update(dalsong, songCode);
             return song;
         }
-  
+
     }
 }

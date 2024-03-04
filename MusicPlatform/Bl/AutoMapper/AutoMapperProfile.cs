@@ -22,8 +22,8 @@ namespace BL.AutoMapper
             //CreateMap<Subscriber, Dal.Do.Subscriber>();
             CreateMap<Singer, Dal.Do.Singer>();
 
-            _ = CreateMap<Song, Dal.Do.Song>();
-                //.ForMember(dest => dest.Singer, opt => opt.MapFrom(src => MapSinger(src.SingerName)));
+            CreateMap<Song, Dal.Do.Song>()
+                .ForMember(dest => dest.Singer, opt => opt.MapFrom(src => MapSinger(src.SingerName)));
 
             CreateMap<Subscriber, Dal.Do.Subscriber>();
             //Dal.Do.Singer MapSinger(string singerName)

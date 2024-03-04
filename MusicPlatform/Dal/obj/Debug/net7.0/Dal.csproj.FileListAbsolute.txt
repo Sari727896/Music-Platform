@@ -40,3 +40,17 @@ C:\Users\User\Desktop\Music Progect c#\Music-Platform\MusicPlatform\Dal\obj\Debu
 C:\Users\User\Desktop\Music Progect c#\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.pdb
 C:\Users\User\Desktop\Music Progect c#\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
 C:\Users\User\Desktop\Music Progect c#\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\ref\Dal.dll
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.deps.json
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.dll
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.pdb
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.dll
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\refint\Dal.dll
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.pdb
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\ref\Dal.dll

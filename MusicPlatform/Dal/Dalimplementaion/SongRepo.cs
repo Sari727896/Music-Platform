@@ -19,9 +19,9 @@ namespace Dal.Dalimplementaion
         }
         public List<Song> GetAll()
         {
-            IEnumerable<Song> songs = musicContext.Songs.Include(s=>s.Singer);
-            //if (songs == null)
-            //    return null;
+            IEnumerable<Song> songs = musicContext.Songs.Include(s => s.Singer);
+            if (songs == null)
+                return null;
             return songs.ToList();
         }
         public Song Add(Song song)

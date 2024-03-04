@@ -25,9 +25,13 @@ public partial class MusicContext : DbContext
 
     public virtual DbSet<Singer> Singers { get; set; }
 
+    public virtual DbSet<SingerSong> SingerSongs { get; set; }
+
     public virtual DbSet<Song> Songs { get; set; }
 
     public virtual DbSet<Subscriber> Subscribers { get; set; }
+
+    public virtual DbSet<SubscriberSong> SubscriberSongs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -146,16 +150,37 @@ public partial class MusicContext : DbContext
                 .HasConstraintName("FK_SingerCity");
         });
 
+        modelBuilder.Entity<SingerSong>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__SingerSo__3214EC07F8625800");
+
+            entity.HasOne(d => d.Singer).WithMany(p => p.SingerSongs)
+                .HasForeignKey(d => d.SingerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_SingerSongs_Singer");
+
+            entity.HasOne(d => d.Song).WithMany(p => p.SingerSongs)
+                .HasForeignKey(d => d.SongId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_SingerSongs_Song");
+        });
+
         modelBuilder.Entity<Song>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Song__3214EC07603D6E56");
 
             entity.ToTable("Song");
 
+            entity.Property(e => e.ComposerName)
+                .IsRequired()
+                .HasMaxLength(50);
             entity.Property(e => e.Description)
                 .IsRequired()
                 .HasMaxLength(50);
             entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.ProcessorName)
                 .IsRequired()
                 .HasMaxLength(50);
             entity.Property(e => e.PublicationDate).HasColumnType("date");
@@ -166,26 +191,13 @@ public partial class MusicContext : DbContext
             entity.HasOne(d => d.Album).WithMany(p => p.Songs)
                 .HasForeignKey(d => d.AlbumId)
                 .HasConstraintName("FK_SongAlbum");
-
-            entity.HasOne(d => d.Composer).WithMany(p => p.Songs)
-                .HasForeignKey(d => d.ComposerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_SongComposer");
-
-            entity.HasOne(d => d.Processor).WithMany(p => p.Songs)
-                .HasForeignKey(d => d.ProcessorId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_SongProcessor");
-
-            entity.HasOne(d => d.Singer).WithMany(p => p.Songs)
-                .HasForeignKey(d => d.SingerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_SongSinger");
         });
 
         modelBuilder.Entity<Subscriber>(entity =>
         {
-            entity.HasKey(e => e.Code).HasName("PK__Subscrib__A25C5AA68405B65D");
+            entity.HasKey(e => e.Code).HasName("PK__Subscrib__A25C5AA6B2FEA2F4");
+
+            entity.ToTable("Subscriber");
 
             entity.Property(e => e.FirstName)
                 .IsRequired()
@@ -197,6 +209,21 @@ public partial class MusicContext : DbContext
             entity.Property(e => e.LastName)
                 .IsRequired()
                 .HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<SubscriberSong>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Subscrib__3214EC07A52465CA");
+
+            entity.HasOne(d => d.Song).WithMany(p => p.SubscriberSongs)
+                .HasForeignKey(d => d.SongId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_SubscriberSongs_Song");
+
+            entity.HasOne(d => d.Subscriber).WithMany(p => p.SubscriberSongs)
+                .HasForeignKey(d => d.SubscriberId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_SubscriberSongs_Subscriber");
         });
 
         OnModelCreatingPartial(modelBuilder);
