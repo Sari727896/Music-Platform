@@ -54,3 +54,17 @@ H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\refint\Dal.dll
 H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.pdb
 H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
 H:\C#\progect\2\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\ref\Dal.dll
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.dll
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\refint\Dal.dll
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.pdb
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.deps.json
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.dll
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.pdb
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+C:\Users\קויפטיל אסתר\Desktop\project\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\ref\Dal.dll

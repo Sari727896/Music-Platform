@@ -25,8 +25,6 @@ public partial class MusicContext : DbContext
 
     public virtual DbSet<Singer> Singers { get; set; }
 
-    public virtual DbSet<SingerSong> SingerSongs { get; set; }
-
     public virtual DbSet<Song> Songs { get; set; }
 
     public virtual DbSet<Subscriber> Subscribers { get; set; }
@@ -43,7 +41,8 @@ public partial class MusicContext : DbContext
 
             entity.Property(e => e.Name)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.PublicationDate).HasColumnType("date");
         });
 
@@ -55,7 +54,8 @@ public partial class MusicContext : DbContext
 
             entity.Property(e => e.Name)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
 
             entity.HasOne(d => d.Country).WithMany(p => p.Cities)
                 .HasForeignKey(d => d.CountryId)
@@ -71,14 +71,17 @@ public partial class MusicContext : DbContext
 
             entity.Property(e => e.FirstName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.Id)
                 .IsRequired()
                 .HasMaxLength(10)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("ID");
             entity.Property(e => e.LastName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
 
             entity.HasOne(d => d.City).WithMany(p => p.Composers)
                 .HasForeignKey(d => d.CityId)
@@ -94,7 +97,8 @@ public partial class MusicContext : DbContext
 
             entity.Property(e => e.Name)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
         });
 
         modelBuilder.Entity<Processor>(entity =>
@@ -105,14 +109,17 @@ public partial class MusicContext : DbContext
 
             entity.Property(e => e.FirstName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.Id)
                 .IsRequired()
                 .HasMaxLength(10)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("ID");
             entity.Property(e => e.LastName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
 
             entity.HasOne(d => d.City).WithMany(p => p.Processors)
                 .HasForeignKey(d => d.CityId)
@@ -138,31 +145,19 @@ public partial class MusicContext : DbContext
 
             entity.ToTable("Singer");
 
+            entity.Property(e => e.Description).UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.FirstName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.LastName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
 
             entity.HasOne(d => d.City).WithMany(p => p.Singers)
                 .HasForeignKey(d => d.CityId)
                 .HasConstraintName("FK_SingerCity");
-        });
-
-        modelBuilder.Entity<SingerSong>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__SingerSo__3214EC07F8625800");
-
-            entity.HasOne(d => d.Singer).WithMany(p => p.SingerSongs)
-                .HasForeignKey(d => d.SingerId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_SingerSongs_Singer");
-
-            entity.HasOne(d => d.Song).WithMany(p => p.SingerSongs)
-                .HasForeignKey(d => d.SongId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_SingerSongs_Song");
         });
 
         modelBuilder.Entity<Song>(entity =>
@@ -173,24 +168,34 @@ public partial class MusicContext : DbContext
 
             entity.Property(e => e.ComposerName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.Description)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.Name)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.ProcessorName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.PublicationDate).HasColumnType("date");
             entity.Property(e => e.TheSongWriter)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
 
             entity.HasOne(d => d.Album).WithMany(p => p.Songs)
                 .HasForeignKey(d => d.AlbumId)
                 .HasConstraintName("FK_SongAlbum");
+
+            entity.HasOne(d => d.Singer).WithMany(p => p.Songs)
+                .HasForeignKey(d => d.SingerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_SongSinger");
         });
 
         modelBuilder.Entity<Subscriber>(entity =>
@@ -201,14 +206,17 @@ public partial class MusicContext : DbContext
 
             entity.Property(e => e.FirstName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.Id)
                 .IsRequired()
                 .HasMaxLength(10)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("ID");
             entity.Property(e => e.LastName)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(50)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
         });
 
         modelBuilder.Entity<SubscriberSong>(entity =>

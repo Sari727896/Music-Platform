@@ -19,5 +19,5 @@ public partial class Singer
 
     public virtual City City { get; set; }
 
-    public virtual ICollection<SingerSong> SingerSongs { get; set; } = new List<SingerSong>();
+    public virtual ICollection<Song> Songs { get; set; } = new List<Song>();
 }

@@ -21,11 +21,13 @@ public partial class Song
 
     public string ProcessorName { get; set; }
 
+    public int SingerId { get; set; }
+
     public virtual Album Album { get; set; }
 
     public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
 
-    public virtual ICollection<SingerSong> SingerSongs { get; set; } = new List<SingerSong>();
+    public virtual Singer Singer { get; set; }
 
     public virtual ICollection<SubscriberSong> SubscriberSongs { get; set; } = new List<SubscriberSong>();
 }

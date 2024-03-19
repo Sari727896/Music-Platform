@@ -3407,21 +3407,19 @@
   },
   "packageFolders": {
     "C:\\Users\\קויפטיל אסתר\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\C#\\progect\\2\\Music-Platform\\MusicPlatform\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Users\\קויפטיל אסתר\\Desktop\\project\\Music-Platform\\MusicPlatform\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "H:\\C#\\progect\\2\\Music-Platform\\MusicPlatform\\Server\\Server.csproj",
+      "projectPath": "C:\\Users\\קויפטיל אסתר\\Desktop\\project\\Music-Platform\\MusicPlatform\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\קויפטיל אסתר\\.nuget\\packages\\",
-      "outputPath": "H:\\C#\\progect\\2\\Music-Platform\\MusicPlatform\\Server\\obj\\",
+      "outputPath": "C:\\Users\\קויפטיל אסתר\\Desktop\\project\\Music-Platform\\MusicPlatform\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\קויפטיל אסתר\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3433,15 +3431,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "H:\\C#\\progect\\2\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj": {
-              "projectPath": "H:\\C#\\progect\\2\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj"
+            "C:\\Users\\קויפטיל אסתר\\Desktop\\project\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj": {
+              "projectPath": "C:\\Users\\קויפטיל אסתר\\Desktop\\project\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj"
             }
           }
         }
@@ -3498,7 +3495,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
