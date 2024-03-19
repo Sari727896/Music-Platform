@@ -1,4 +1,5 @@
-﻿using Dal.Do;
+﻿using Dal.DalApi;
+using Dal.Do;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Dalimplementaion;
 
-public class SubscriberRepo
+public class SubscriberRepo:ISubscriberRepoDal
 {
     MusicContext musicContext;
     public SubscriberRepo(MusicContext musicContext)

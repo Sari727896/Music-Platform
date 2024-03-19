@@ -5,21 +5,18 @@ using Dal.Dalimplementaion;
 using Dal.Do;
 using Dal;
 using Microsoft.EntityFrameworkCore;
+using BL;
 
 var builder = WebApplication.CreateBuilder(args);
-//ìòùåú àú æä áconfigure sevices
-builder.Services.AddAutoMapper(typeof(Program));
-// Add services to the container.
 
+
+// Add services to the container.
 builder.Services.AddControllers();
 
 DBActions db = new DBActions(builder.Configuration);
 string connStr = db.GetConnectionString("MusicDB");
-builder.Services.AddDbContext<MusicContext>(opt => opt.UseSqlServer(connStr));
-builder.Services.AddScoped<ISongRepoDal, SongRepo>();
-builder.Services.AddScoped<ISongRepoBl, SongServiceBl>();
-builder.Services.AddScoped<ISingerRepoDal, SingerRepo>();
-builder.Services.AddScoped<ISingerRepoBl, SingerServiceBl>();
+builder.Services.AddScoped<BLManager>(x => new BLManager(connStr));
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
