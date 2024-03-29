@@ -7,12 +7,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BL.BlImplementaion;
 
 public class SubscriberServiceBl : ISubscriberRepoBl
 {
     ISubscriberRepoDal subscriberRepoDal;
+    ISongRepoBl songRepoBl;
     public SubscriberServiceBl(ISubscriberRepoDal subscriberRepoDal)
     {
         this.subscriberRepoDal = subscriberRepoDal;
@@ -61,16 +63,27 @@ public class SubscriberServiceBl : ISubscriberRepoBl
 
     public List<Song> GetSubscriberSongs(int subscriberId)
     {
-        var data = subscriberRepoDal.GetSubscriberSongs();
-        List<int> subscriberIdSongs = new List<int>();
-        List<Song> subscriberSongs = new List<Song>();
-        //foreach (var subscriberSongs in data)
-        //{
+        List<SubscriberSong> list = new();
+        var subscriberSongsId = subscriberRepoDal.GetSubscriberSongs(subscriberId);
+        foreach (var item in subscriberSongsId)
+        {
+            SubscriberSong subscriberSong = new();
+            subscriberSong.Id = item.Id;
+            subscriberSong.SongId = item.SongId;
+            subscriberSong.SubscriberId = item.SubscriberId;
+            list.Add(subscriberSong);
+        }
 
-        //}
-        //subscriberIdSongs.Add((from n in data
-        //                             where n.SubscriberId == subscriberId
-        //                             select n.SongId).ToList());
+        var songs = songRepoBl.GetAll();
+        List<Song> subscriberSongs = new List<Song>();
+        foreach (SubscriberSong s in list)
+        {
+            var song = songs.FirstOrDefault(song => song.Id == s.SongId);
+            if (song != null)
+            {
+                subscriberSongs.Add(song);
+            }
+        }
         return subscriberSongs;
     }
 

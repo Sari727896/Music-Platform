@@ -1,5 +1,6 @@
 ﻿using Dal.DalApi;
 using Dal.Do;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +20,6 @@ public class SubscriberRepo:ISubscriberRepoDal
     {
         IEnumerable<Subscriber> subscriber = musicContext.Subscribers;
         return subscriber.ToList();
-    }
-    public List<SubscriberSong> GetSubscriberSongs()
-    {
-        IEnumerable<SubscriberSong> subscriberSongs = musicContext.SubscriberSongs;
-        return subscriberSongs.ToList();
     }
     public Subscriber Add(Subscriber subscriber)
     {
@@ -52,6 +48,16 @@ public class SubscriberRepo:ISubscriberRepoDal
             return subscriberToDelete;
         }
         return null;
+    }
+    public List<SubscriberSong> GetSubscriberSongs(int subscriberId)
+    {
+        List<SubscriberSong> subscriberSongsId = new List<SubscriberSong>();
+        foreach (var s in musicContext.SubscriberSongs)
+        {
+            if (s.SubscriberId == subscriberId)
+                subscriberSongsId.Add(s);
+        }
+        return subscriberSongsId;
     }
 
 }

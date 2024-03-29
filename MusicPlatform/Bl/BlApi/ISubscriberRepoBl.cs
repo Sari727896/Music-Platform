@@ -9,5 +9,5 @@ namespace BL.BlApi;
 
 public interface ISubscriberRepoBl:IRepoBl<Subscriber>
 {
-
+    public List<Song> GetSubscriberSongs(int suscriberId);
 }

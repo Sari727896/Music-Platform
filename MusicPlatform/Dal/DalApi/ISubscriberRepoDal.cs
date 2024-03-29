@@ -9,5 +9,5 @@ namespace Dal.DalApi;
 
 public interface ISubscriberRepoDal:IRepo<Subscriber>
 {
-    public List<SubscriberSong> GetSubscriberSongs();
+    public List<SubscriberSong> GetSubscriberSongs(int suscriberId);
 }

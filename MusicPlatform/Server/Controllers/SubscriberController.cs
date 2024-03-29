@@ -46,4 +46,12 @@ public class SubscriberController:BaseController
             return BadRequest();
         return subscriberRepoBl.Delete(id);
     }
+    [HttpGet("subscriberId")]
+    public ActionResult<List<Song>> GetSubscribersSongs(int subscriberId)
+    {
+        if (subscriberRepoBl.GetSubscriberSongs(subscriberId) == null)
+            return NotFound();
+        return subscriberRepoBl.GetSubscriberSongs(subscriberId);
+    }
+
 }
