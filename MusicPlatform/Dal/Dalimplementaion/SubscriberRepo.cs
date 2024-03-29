@@ -20,6 +20,11 @@ public class SubscriberRepo:ISubscriberRepoDal
         IEnumerable<Subscriber> subscriber = musicContext.Subscribers;
         return subscriber.ToList();
     }
+    public List<SubscriberSong> GetSubscriberSongs()
+    {
+        IEnumerable<SubscriberSong> subscriberSongs = musicContext.SubscriberSongs;
+        return subscriberSongs.ToList();
+    }
     public Subscriber Add(Subscriber subscriber)
     {
         musicContext.Subscribers.Add(subscriber);

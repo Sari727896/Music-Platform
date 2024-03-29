@@ -59,5 +59,20 @@ public class SubscriberServiceBl : ISubscriberRepoBl
         return subscriber;
     }
 
+    public List<Song> GetSubscriberSongs(int subscriberId)
+    {
+        var data = subscriberRepoDal.GetSubscriberSongs();
+        List<int> subscriberIdSongs = new List<int>();
+        List<Song> subscriberSongs = new List<Song>();
+        //foreach (var subscriberSongs in data)
+        //{
+
+        //}
+        //subscriberIdSongs.Add((from n in data
+        //                             where n.SubscriberId == subscriberId
+        //                             select n.SongId).ToList());
+        return subscriberSongs;
+    }
+
 }
 
