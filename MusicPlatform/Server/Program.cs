@@ -15,7 +15,7 @@ builder.Services.AddControllers();
 
 DBActions db = new DBActions(builder.Configuration);
 string connStr = db.GetConnectionString("MusicDB");
-builder.Services.AddScoped<BLManager>(x => new BLManager(connStr));
+builder.Services.AddSingleton<BLManager>(x => new BLManager(connStr));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

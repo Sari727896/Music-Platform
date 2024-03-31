@@ -103,3 +103,18 @@ C:\Users\User\Desktop\‏‏c# project\Music-Platform\MusicPlatform\Bl\obj\Debug
 C:\Users\User\Desktop\‏‏c# project\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\refint\BL.dll
 C:\Users\User\Desktop\‏‏c# project\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\BL.pdb
 C:\Users\User\Desktop\‏‏c# project\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\ref\BL.dll
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\bin\Debug\net7.0\BL.deps.json
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\bin\Debug\net7.0\BL.dll
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\bin\Debug\net7.0\BL.pdb
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\bin\Debug\net7.0\Dal.dll
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\bin\Debug\net7.0\Dal.pdb
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\BL.csproj.AssemblyReference.cache
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\BL.AssemblyInfoInputs.cache
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\BL.AssemblyInfo.cs
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\BL.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\BL.csproj.CopyComplete
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\BL.dll
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\refint\BL.dll
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\BL.pdb
+C:\Users\User\Downloads\Music-Platform\MusicPlatform\Bl\obj\Debug\net7.0\ref\BL.dll

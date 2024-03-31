@@ -14,9 +14,9 @@ namespace BL;
 
 public class BLManager
 {
-    public ISingerRepoBl Singers { get;  }
-    public ISongRepoBl Songs { get;  }
-    public ISubscriberRepoBl Subscribers { get; }
+    public ISingerRepoBl Singers { get; set; }
+    public ISongRepoBl Songs { get; set; }
+    public ISubscriberRepoBl Subscribers { get; set; }
     public BLManager(string connStr)
     {
         ServiceCollection services = new ServiceCollection();

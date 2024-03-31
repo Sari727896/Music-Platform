@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bqCSylEFcd+i1yDkW4TVsKlk/O1fCdOSCo1Lm+4iWcj7EhfQYgq2NOEXmPaDh5oPC5QfXlw+ZD+DxC5Iny5R2g==",
+  "dgSpecHash": "+ZxoxF8YDfEfsstH50N1HEdkGilMgK5nNPVkxVhYJ+wmL/788yuJ7VVtS9NxzZ6BRABa9vLiP4g2aQn0ENm+qg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\‏‏c# project\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

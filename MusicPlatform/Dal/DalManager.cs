@@ -18,11 +18,11 @@ public class DalManager
     public ISubscriberRepoDal Subscribers { get; set; }
     public DalManager(string connStr)
     {
-        ServiceCollection collecion =new ServiceCollection();
-        collecion.AddDbContext<MusicContext>(opt => opt.UseSqlServer(connStr));
+        //ServiceCollection collecion =new ServiceCollection();
+        //collecion
         
         ServiceCollection services = new ServiceCollection();
-
+        services.AddDbContext<MusicContext>(opt => opt.UseSqlServer(connStr));
         services.AddSingleton<MusicContext>();
         services.AddScoped<ISingerRepoDal, SingerRepo>();
         services.AddScoped<ISongRepoDal, SongRepo>();
@@ -34,4 +34,5 @@ public class DalManager
         Subscribers = servicesProvider.GetRequiredService<ISubscriberRepoDal>();
 
     }
+
 }
