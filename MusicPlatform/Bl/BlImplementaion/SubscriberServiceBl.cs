@@ -1,5 +1,6 @@
 ﻿using BL.BlApi;
 using BL.Bo;
+using Dal;
 using Dal.DalApi;
 using Dal.Dalimplementaion;
 using System;
@@ -15,9 +16,9 @@ public class SubscriberServiceBl : ISubscriberRepoBl
 {
     ISubscriberRepoDal subscriberRepoDal;
     ISongRepoBl songRepoBl;
-    public SubscriberServiceBl(ISubscriberRepoDal subscriberRepoDal)
+    public SubscriberServiceBl(DalManager dalManager)
     {
-        this.subscriberRepoDal = subscriberRepoDal;
+        this.subscriberRepoDal =dalManager.SubscribersRepo;
     }
     public List<Subscriber> GetAll()
     {

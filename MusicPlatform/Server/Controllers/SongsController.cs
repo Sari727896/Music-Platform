@@ -2,6 +2,7 @@
 using BL.BlApi;
 using BL.Bo;
 using System.Collections.Generic;
+using BL;
 
 namespace Server.Controllers
 {
@@ -9,9 +10,9 @@ namespace Server.Controllers
     public class SongsController : BaseController
     {
         ISongRepoBl songRepoBl;
-        public SongsController(ISongRepoBl songRepoBl)
+        public SongsController(BLManager bLManager)
         {
-            this.songRepoBl = songRepoBl;
+            this.songRepoBl = bLManager.Songs;
         }
         [HttpGet("api/songs")]
         public ActionResult<List<Song>> Get()

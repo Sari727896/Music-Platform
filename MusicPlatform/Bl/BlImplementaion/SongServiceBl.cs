@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BL.BlApi;
 using BL.Bo;
+using Dal;
 using Dal.DalApi;
 using Dal.Dalimplementaion;
 using Dal.Do;
@@ -17,9 +18,9 @@ namespace BL.BlImplementaion
     {
         ISongRepoDal songRepo;
         IMapper mapper;
-        public SongServiceBl(ISongRepoDal songRepo, IMapper mapper)
+        public SongServiceBl(DalManager dalManager, IMapper mapper)
         {
-            this.songRepo = songRepo;
+            this.songRepo = dalManager.SongsRepo;
             this.mapper = mapper;
         }
 

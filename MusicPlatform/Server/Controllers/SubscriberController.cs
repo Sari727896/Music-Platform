@@ -1,4 +1,5 @@
-﻿using BL.BlApi;
+﻿using BL;
+using BL.BlApi;
 using BL.Bo;
 using Dal.DalApi;
 using Microsoft.AspNetCore.Mvc;
@@ -8,9 +9,9 @@ namespace Server.Controllers;
 public class SubscriberController:BaseController
 {
     ISubscriberRepoBl subscriberRepoBl;
-    public SubscriberController(ISubscriberRepoBl subscriberRepoBl)
+    public SubscriberController(BLManager bLManager)
     {
-        this.subscriberRepoBl = subscriberRepoBl;
+        this.subscriberRepoBl = bLManager.Subscribers;
     }
     [HttpGet]
     public ActionResult<List<Subscriber>> GetSubscribers()

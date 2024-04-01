@@ -13,25 +13,26 @@ namespace Dal;
 
 public class DalManager
 {
-    public ISingerRepoDal Singers { get; set; }
-    public ISongRepoDal Songs { get; set; }
-    public ISubscriberRepoDal Subscribers { get; set; }
+    public ISingerRepoDal SingersRepo { get; set; }
+    public ISongRepoDal SongsRepo { get; set; }
+    public ISubscriberRepoDal SubscribersRepo { get; set; }
     public DalManager(string connStr)
     {
         //ServiceCollection collecion =new ServiceCollection();
         //collecion
-        
+
         ServiceCollection services = new ServiceCollection();
-        services.AddDbContext<MusicContext>(opt => opt.UseSqlServer(connStr));
+     
         services.AddSingleton<MusicContext>();
         services.AddScoped<ISingerRepoDal, SingerRepo>();
         services.AddScoped<ISongRepoDal, SongRepo>();
         services.AddScoped<ISubscriberRepoDal,SubscriberRepo>();
+        services.AddDbContext<MusicContext>(opt => opt.UseSqlServer(connStr));
         ServiceProvider servicesProvider = services.BuildServiceProvider();
 
-        Singers = servicesProvider.GetRequiredService<ISingerRepoDal>();
-        Songs = servicesProvider.GetRequiredService<ISongRepoDal>();
-        Subscribers = servicesProvider.GetRequiredService<ISubscriberRepoDal>();
+        SingersRepo = servicesProvider.GetRequiredService<ISingerRepoDal>();
+        SongsRepo = servicesProvider.GetRequiredService<ISongRepoDal>();
+        SubscribersRepo = servicesProvider.GetRequiredService<ISubscriberRepoDal>();
 
     }
 

@@ -1,4 +1,5 @@
-﻿using BL.BlApi;
+﻿using BL;
+using BL.BlApi;
 using BL.Bo;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -9,9 +10,9 @@ namespace Server.Controllers
     {
 
         ISingerRepoBl singerRepoBl;
-        public SingersController(ISingerRepoBl singerRepoBl)
+        public SingersController(BLManager bLManager)
         {
-            this.singerRepoBl = singerRepoBl;
+            this.singerRepoBl =bLManager.Singers;
         }
         [HttpGet]
         public ActionResult<List<Singer>> GetSingers()

@@ -33,6 +33,5 @@ public class BLManager
         Singers = provider.GetRequiredService<ISingerRepoBl>();
         Songs = provider.GetRequiredService<ISongRepoBl>();
         Subscribers = provider.GetRequiredService<ISubscriberRepoBl>();
-
     }
 }

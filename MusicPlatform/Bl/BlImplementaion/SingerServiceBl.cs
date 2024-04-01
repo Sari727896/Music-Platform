@@ -1,5 +1,6 @@
 ﻿using BL.BlApi;
 using BL.Bo;
+using Dal;
 using Dal.DalApi;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,10 @@ namespace BL.BlImplementaion
     {
         ISingerRepoDal singerRepo;
         ISongRepoBl songRepoBl;
-        public SingerServiceBl(ISingerRepoDal singerRepo, ISongRepoBl songRepoBl)
+        public SingerServiceBl(DalManager dalManager,BLManager bLManager)
         {
-            this.singerRepo = singerRepo;
-            this.songRepoBl=songRepoBl;
+            this.singerRepo =dalManager.SingersRepo;
+            this.songRepoBl=bLManager.Songs;
         }
 
         public Singer Add(Singer singer)
