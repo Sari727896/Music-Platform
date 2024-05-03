@@ -13,11 +13,11 @@ namespace BL.BlImplementaion
     public class SingerServiceBl : ISingerRepoBl
     {
         ISingerRepoDal singerRepo;
-        ISongRepoBl songRepoBl;
-        public SingerServiceBl(DalManager dalManager,BLManager bLManager)
+        ISongRepoDal  songRepo;
+        public SingerServiceBl(DalManager dalManager)//,BLManager bLManager)
         {
             this.singerRepo =dalManager.SingersRepo;
-            this.songRepoBl=bLManager.Songs;
+            this.songRepo = dalManager.SongsRepo;
         }
 
         public Singer Add(Singer singer)
@@ -61,9 +61,11 @@ namespace BL.BlImplementaion
         }
         public List<Song> GetSingerSongs(int singerId)
         {
-            var songs = songRepoBl.GetAll();
+            var songs = songRepo.GetAll();
             var singers = singerRepo.GetAll();
+
             var singer = singers.Find(s => s.Id == singerId);
+          
             if (singer == null)
                 return null;
             var singerSong = songs.Where(s => s.SingerId == singerId).ToList();
