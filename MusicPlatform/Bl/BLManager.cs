@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BL.BlApi;
+using BL.BlImplementaion;
 using Dal;
 using Dal.DalApi;
 using Dal.Dalimplementaion;
@@ -23,10 +24,11 @@ public class BLManager
      
         services.AddAutoMapper(typeof(AutoMapper.AutoMapperProfile));
 
+
         services.AddSingleton<DalManager>(x => new DalManager(connStr));
-        services.AddScoped<ISingerRepoDal, SingerRepo>();
-        services.AddScoped<ISongRepoDal, SongRepo>();
-        services.AddScoped<ISubscriberRepoDal, SubscriberRepo>();
+        services.AddScoped<ISingerRepoBl, SingerServiceBl>();
+        services.AddScoped<ISongRepoBl, SongServiceBl>();
+        services.AddScoped<ISubscriberRepoBl, SubscriberServiceBl>();
 
         ServiceProvider provider = services.BuildServiceProvider();  
    

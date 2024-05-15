@@ -20,9 +20,9 @@ namespace BL.AutoMapper
             //      .ForMember(dest => dest.SingerId, opt => opt.MapFrom(src => src.SingerId))
             //      .ForMember(dest => dest.Singer, opt => opt.Ignore());
             //CreateMap<Subscriber, Dal.Do.Subscriber>();
-            CreateMap<Singer, Dal.Do.Singer>();
+            CreateMap<Singer, Dal.Do.Singer>().ReverseMap();
 
-            //CreateMap<Song, Dal.Do.Song>()
+            CreateMap<Song, Dal.Do.Song>().ReverseMap();
             //    .ForMember(dest => dest.Singer, opt => opt.MapFrom(src => MapSinger(src.SingerName)));
 
             CreateMap<Subscriber, Dal.Do.Subscriber>();

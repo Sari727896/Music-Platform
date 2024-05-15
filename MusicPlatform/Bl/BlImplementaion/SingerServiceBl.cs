@@ -1,4 +1,5 @@
-﻿using BL.BlApi;
+﻿using AutoMapper;
+using BL.BlApi;
 using BL.Bo;
 using Dal;
 using Dal.DalApi;
@@ -13,11 +14,13 @@ namespace BL.BlImplementaion
     public class SingerServiceBl : ISingerRepoBl
     {
         ISingerRepoDal singerRepo;
-        ISongRepoBl songRepoBl;
-        public SingerServiceBl(DalManager dalManager,BLManager bLManager)
+        ISongRepoDal  songRepo;
+        IMapper map;
+        public SingerServiceBl(DalManager dalManager, IMapper map)
         {
             this.singerRepo =dalManager.SingersRepo;
-            this.songRepoBl=bLManager.Songs;
+            this.songRepo = dalManager.SongsRepo;
+            this.map = map;
         }
 
         public Singer Add(Singer singer)
@@ -45,29 +48,22 @@ namespace BL.BlImplementaion
         }
         public List<Singer> GetAll()
         {
-            List<Singer> list = new();
+            List<Singer> listBl = new();
             var data = singerRepo.GetAll();
-            foreach (var item in data)
-            {
-                Singer singer = new();
-                singer.Id = item.Id;
-                singer.Age = item.Age;
-                singer.FirstName = item.FirstName;
-                singer.LastName = item.LastName;
-                singer.Description = item.Description;
-                list.Add(singer);
-            }
-            return list;
+            data.ForEach(sin => listBl.Add(map.Map<Singer>(sin)));
+            return listBl;
         }
         public List<Song> GetSingerSongs(int singerId)
         {
-            var songs = songRepoBl.GetAll();
+            var songs = songRepo.GetAll();
             var singers = singerRepo.GetAll();
+            List<Song> listBlSong = new();
             var singer = singers.Find(s => s.Id == singerId);
             if (singer == null)
                 return null;
             var singerSong = songs.Where(s => s.SingerId == singerId).ToList();
-            return singerSong;
+            singerSong.ForEach(s=> listBlSong.Add(map.Map<Song>(s)));
+            return listBlSong;
         }
         public Singer Update(Singer singer, int singerId)
         {
