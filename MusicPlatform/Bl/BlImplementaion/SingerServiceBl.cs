@@ -25,12 +25,13 @@ namespace BL.BlImplementaion
 
         public Singer Add(Singer singer)
         {
-            Dal.Do.Singer singer1 = new();
-            singer1.Age= singer.Age;
-            singer1.FirstName = singer.FirstName;
-            singer1.LastName = singer.LastName;
-            singer1.Id = singer.Id;
-            singer1.Description = singer.Description;
+            Dal.Do.Singer singer1 =map.Map<Dal.Do.Singer>(singer);
+            //singer1.Age= singer.Age;
+            //singer1.FirstName = singer.FirstName;
+            //singer1.LastName = singer.LastName;
+            //singer1.Id = singer.Id;
+            //singer1.Description = singer.Description;
+
             singerRepo.Add(singer1);
             return singer;
         }
@@ -38,12 +39,12 @@ namespace BL.BlImplementaion
         public Singer Delete(int id)
         {
             Dal.Do.Singer dalsinger = singerRepo.Delete(id);
-            Singer singer = new Singer();
-            singer.FirstName = dalsinger.FirstName;
-            singer.Id = dalsinger.Id;
-            singer.LastName = dalsinger.LastName;
-            singer.Description = dalsinger.Description;
-            singer.Age = dalsinger.Age;
+            Singer singer = map.Map<Singer>(dalsinger);
+            //singer.FirstName = dalsinger.FirstName;
+            //singer.Id = dalsinger.Id;
+            //singer.LastName = dalsinger.LastName;
+            //singer.Description = dalsinger.Description;
+            //singer.Age = dalsinger.Age;
             return singer;
         }
         public List<Singer> GetAll()
@@ -67,11 +68,11 @@ namespace BL.BlImplementaion
         }
         public Singer Update(Singer singer, int singerId)
         {
-            Dal.Do.Singer dalsinger = new();
-            dalsinger.FirstName = singer.FirstName;
-            dalsinger.LastName = singer.LastName;
-            dalsinger.Description = singer.Description;
-            dalsinger.Age= singer.Age;
+            Dal.Do.Singer dalsinger = map.Map<Dal.Do.Singer>(singer);
+            //dalsinger.FirstName = singer.FirstName;
+            //dalsinger.LastName = singer.LastName;
+            //dalsinger.Description = singer.Description;
+            //dalsinger.Age= singer.Age;
             singerRepo.Update(dalsinger, singerId);
             return singer;
         }
