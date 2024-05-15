@@ -35,7 +35,7 @@ namespace Dal.Dalimplementaion
             Song songToUpdate = musicContext.Songs.FirstOrDefault(p => p.Id == id);
             if (songToUpdate != null)
             {
-                songToUpdate.TheSongWriter = song.TheSongWriter;
+                songToUpdate.Name = song.Name;
                 musicContext.SaveChanges();
                 return songToUpdate;
             }

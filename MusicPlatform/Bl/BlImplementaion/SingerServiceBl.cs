@@ -33,7 +33,8 @@ namespace BL.BlImplementaion
             //singer1.Description = singer.Description;
 
             singerRepo.Add(singer1);
-            return singer;
+            Bo.Singer singer2=map.Map<Bo.Singer>(singer1);
+            return singer2;
         }
 
         public Singer Delete(int id)
@@ -74,7 +75,8 @@ namespace BL.BlImplementaion
             //dalsinger.Description = singer.Description;
             //dalsinger.Age= singer.Age;
             singerRepo.Update(dalsinger, singerId);
-            return singer;
+            Bo.Singer singerBl=map.Map<Bo.Singer>(dalsinger);
+            return singerBl;
         }
     }
 }

@@ -22,9 +22,17 @@ namespace BL.AutoMapper
             //CreateMap<Subscriber, Dal.Do.Subscriber>();
             CreateMap<Singer, Dal.Do.Singer>().ReverseMap();
 
-            CreateMap<Song, Dal.Do.Song>().ReverseMap();
+            CreateMap<Song, Dal.Do.Song>()
+      .ForMember(dest => dest.ComposerName, opt => opt.MapFrom(src => GetComposerName(src)))
+      .ForMember(dest => dest.Description, opt => opt.MapFrom(src => GetDescription(src)))
+      .ForMember(dest=>dest.ProcessorName, opt => opt.MapFrom(src => GetProcessorName(src)))
+      .ForMember(dest=>dest.TheSongWriter, opt => opt.MapFrom(src => GetSongWriter(src)))
+      .ReverseMap();
+
+
             //    .ForMember(dest => dest.Singer, opt => opt.MapFrom(src => MapSinger(src.SingerName)));
 
+            //CreateMap<Dal.Do.Song,Song>();
             CreateMap<Subscriber, Dal.Do.Subscriber>();
             //Dal.Do.Singer MapSinger(string singerName)
             //{
@@ -40,7 +48,25 @@ namespace BL.AutoMapper
             //}
         }
 
-
+        private string GetComposerName(Song song)
+        {
+            // החזרת ערך ריק או ערך קבוע
+            return "Unknown";
+        }
+        private string GetDescription(Song song)
+        {
+            return "Unknown Song";
+        }
+        private string GetProcessorName(Song song)
+        {
+            // החזרת ערך ריק או ערך קבוע
+            return "Unknown";
+        }
+        private string GetSongWriter(Song song)
+        {
+            // החזרת ערך ריק או ערך קבוע
+            return "Unknown";
+        }
     }
 
 }

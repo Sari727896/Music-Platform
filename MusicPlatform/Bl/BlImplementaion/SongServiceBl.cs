@@ -37,59 +37,51 @@ namespace BL.BlImplementaion
         public Bo.Song Delete(int code)
         {
             Dal.Do.Song dalsong = songRepo.Delete(code);
-            Bo.Song song = new();
-            song.Id = dalsong.Id;
-            song.Name = dalsong.Name;
-            song.SingerId = dalsong.SingerId;
-            song.PublicationDate = dalsong.PublicationDate;
+            Bo.Song song =mapper.Map<Bo.Song>(dalsong);
+            //song.Id = dalsong.Id;
+            //song.Name = dalsong.Name;
+            //song.SingerId = dalsong.SingerId;
+            //song.PublicationDate = dalsong.PublicationDate;
             //song.SingerName = dalsong.Singer.FirstName + " " + dalsong.Singer.LastName;
             return song;
         }
 
         public List<Bo.Song> GetAll()
         {
-            List<Bo.Song> list = new();
+            List<Bo.Song> listBl = new();
             var data = songRepo.GetAll();
-            foreach (var item in data)
-            {
-                Bo.Song song = new();
-                song.Id = item.Id;
-                song.Name = item.Name;
-                song.SingerId = item.SingerId;
-                song.PublicationDate = item.PublicationDate;
-                //song.SingerName = item.Singer.FirstName + " " + item.Singer.LastName;
-                list.Add(song);
-            }
-            return list;
+            data.ForEach(s => listBl.Add(mapper.Map<Bo.Song>(s)));
+            return listBl;
         }
         public Bo.Song GetPublicationSong()
         {
             DateTime lastDate = DateTime.MinValue;
             var data = songRepo.GetAll();
-            Bo.Song lastSong = new();
-            foreach (var item in data)
-            {
-                if (item.PublicationDate > lastDate)
-                {
-                    lastDate = item.PublicationDate;
-                    lastSong.Id = item.Id;
-                    lastSong.Name = item.Name;
-                    lastSong.SingerId = item.SingerId;
-                    lastSong.PublicationDate = item.PublicationDate;
-                }
-            }
+            Bo.Song lastSong =mapper.Map<Bo.Song>(data.OrderByDescending(s=>s.PublicationDate).FirstOrDefault());
+            //foreach (var item in data)
+            //{
+            //    if (item.PublicationDate > lastDate)
+            //    {
+            //        lastDate = item.PublicationDate;
+            //        lastSong.Id = item.Id;
+            //        lastSong.Name = item.Name;
+            //        lastSong.SingerId = item.SingerId;
+            //        lastSong.PublicationDate = item.PublicationDate;
+            //    }
+            //}
             return lastSong;
         }
 
         public Bo.Song Update(Bo.Song song, int songCode)
         {
-            Dal.Do.Song dalsong = new();
-            dalsong.SingerId = song.SingerId;
-            dalsong.PublicationDate = song.PublicationDate;
-            dalsong.Id = songCode;
-            dalsong.Name = song.Name;
+            Dal.Do.Song dalsong =mapper.Map<Dal.Do.Song>(song);
+            //dalsong.SingerId = song.SingerId;
+            //dalsong.PublicationDate = song.PublicationDate;
+            //dalsong.Id = songCode;
+            //dalsong.Name = song.Name;
             songRepo.Update(dalsong, songCode);
-            return song;
+            Bo.Song blsong=mapper.Map<Bo.Song>(dalsong);
+            return blsong;
         }
 
     }
