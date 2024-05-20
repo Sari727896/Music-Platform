@@ -1,8 +1,10 @@
-﻿using BL.BlApi;
+﻿using AutoMapper;
+using BL.BlApi;
 using BL.Bo;
 using Dal;
 using Dal.DalApi;
 using Dal.Dalimplementaion;
+using Dal.Do;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,59 +18,64 @@ public class SubscriberServiceBl : ISubscriberRepoBl
 {
     ISubscriberRepoDal subscriberRepoDal;
     ISongRepoBl songRepoBl;
-    public SubscriberServiceBl(DalManager dalManager)
+    IMapper mapper;
+    public SubscriberServiceBl(DalManager dalManager, IMapper mapper)
     {
         this.subscriberRepoDal =dalManager.SubscribersRepo;
+        this.mapper = mapper;
     }
-    public List<Subscriber> GetAll()
+    public List<Bo.Subscriber> GetAll()
     {
-        List<Subscriber> list = new();
+        List<Bo.Subscriber> list = new();
         var data = subscriberRepoDal.GetAll();
-        foreach (var item in data)
-        {
-            Subscriber subscriber = new();
-            subscriber.Id = item.Id;
-            subscriber.FirstName = item.FirstName;
-            subscriber.LastName = item.LastName;
-            list.Add(subscriber);
-        }
+        data.ForEach(s => list.Add(mapper.Map<Bo.Subscriber>(s)));
         return list;
     }
-    public Subscriber Add(Subscriber subscriber)
+    public Bo.Subscriber Add(Bo.Subscriber subscriber)
     {
-        Dal.Do.Subscriber subscriber1 = new();
-        subscriber1.Id = subscriber.Id;
-        subscriber1.FirstName = subscriber.FirstName;
-        subscriber1.LastName = subscriber.LastName;
-        subscriberRepoDal.Add(subscriber1);
-        return subscriber;
+        //Dal.Do.Subscriber subscriber1 = new();
+        //subscriber1.Id = subscriber.Id;
+        //subscriber1.FirstName = subscriber.FirstName;
+        //subscriber1.LastName = subscriber.LastName;
+        //subscriberRepoDal.Add(subscriber1);
+        //return subscriber;
+
+        Dal.Do.Subscriber subscriber1 = mapper.Map<Dal.Do.Subscriber>(subscriber);
+        Dal.Do.Subscriber addsubscriber = subscriberRepoDal.Add(subscriber1);
+        Bo.Subscriber addedBoSubscriber= mapper.Map<Bo.Subscriber>(addsubscriber);
+        return addedBoSubscriber;
     }
-    public Subscriber Update(Subscriber subscriber, int somethimgCode)
+    public Bo.Subscriber Update(Bo.Subscriber subscriber, int somethimgCode)
     {
-        Dal.Do.Subscriber dalsubscriber = new();
-        subscriber.Id = subscriber.Id;
-        dalsubscriber.FirstName = subscriber.FirstName;
-        dalsubscriber.LastName = subscriber.LastName;
+        Dal.Do.Subscriber dalsubscriber = mapper.Map<Dal.Do.Subscriber>(subscriber);
+        //subscriber.Id = subscriber.Id;
+        //dalsubscriber.FirstName = subscriber.FirstName;
+        //dalsubscriber.LastName = subscriber.LastName;
+        //subscriberRepoDal.Update(dalsubscriber, somethimgCode);
+        //return subscriber;
         subscriberRepoDal.Update(dalsubscriber, somethimgCode);
-        return subscriber;
+        Bo.Subscriber blSubscriber = mapper.Map<Bo.Subscriber>(dalsubscriber);
+        return blSubscriber;
+
     }
-    public Subscriber Delete(int code)
+    public Bo.Subscriber Delete(int code)
     {
         Dal.Do.Subscriber dalsubscriber = subscriberRepoDal.Delete(code);
-        Subscriber subscriber = new Subscriber();
-        subscriber.Id = dalsubscriber.Id;
-        subscriber.FirstName = dalsubscriber.FirstName;
-        subscriber.LastName = dalsubscriber.LastName;
+        Bo.Subscriber subscriber = mapper.Map<Bo.Subscriber>(dalsubscriber);
+        //subscriber.Id = dalsubscriber.Id;
+        //subscriber.FirstName = dalsubscriber.FirstName;
+        //subscriber.LastName = dalsubscriber.LastName;
         return subscriber;
+      
     }
 
-    public List<Song> GetSubscriberSongs(int subscriberId)
+    public List<Bo.Song> GetSubscriberSongs(int subscriberId)
     {
-        List<SubscriberSong> list = new();
+        List<Bo.SubscriberSong> list = new();
         var subscriberSongsId = subscriberRepoDal.GetSubscriberSongs(subscriberId);
         foreach (var item in subscriberSongsId)
         {
-            SubscriberSong subscriberSong = new();
+            Bo.SubscriberSong subscriberSong = new();
             subscriberSong.Id = item.Id;
             subscriberSong.SongId = item.SongId;
             subscriberSong.SubscriberId = item.SubscriberId;
@@ -76,8 +83,8 @@ public class SubscriberServiceBl : ISubscriberRepoBl
         }
 
         var songs = songRepoBl.GetAll();
-        List<Song> subscriberSongs = new List<Song>();
-        foreach (SubscriberSong s in list)
+        List<Bo.Song> subscriberSongs = new();
+        foreach (Bo.SubscriberSong s in list)
         {
             var song = songs.FirstOrDefault(song => song.Id == s.SongId);
             if (song != null)

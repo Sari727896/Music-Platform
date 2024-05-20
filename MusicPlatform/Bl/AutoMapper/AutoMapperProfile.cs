@@ -33,7 +33,7 @@ namespace BL.AutoMapper
             //    .ForMember(dest => dest.Singer, opt => opt.MapFrom(src => MapSinger(src.SingerName)));
 
             //CreateMap<Dal.Do.Song,Song>();
-            CreateMap<Subscriber, Dal.Do.Subscriber>();
+            CreateMap<Subscriber, Dal.Do.Subscriber>().ReverseMap();
             //Dal.Do.Singer MapSinger(string singerName)
             //{
             //    string[] nameParts = singerName.Split(' ');

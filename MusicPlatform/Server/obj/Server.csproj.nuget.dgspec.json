@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Server\\Server.csproj": {}
+    "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Server\\Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj": {
+    "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj",
+        "projectUniqueName": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Bl\\obj\\",
+        "projectPath": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj",
+        "packagesPath": "C:\\Users\\פרידמן רבקה\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Bl\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\פרידמן רבקה\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj"
+              "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj": {
+                "projectPath": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj"
               }
             }
           }
@@ -74,24 +73,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj": {
+    "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj",
+        "projectUniqueName": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj",
         "projectName": "Dal",
-        "projectPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Dal\\obj\\",
+        "projectPath": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Dal\\Dal.csproj",
+        "packagesPath": "C:\\Users\\פרידמן רבקה\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\פרידמן רבקה\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -100,7 +99,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -160,24 +158,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Server\\Server.csproj": {
+    "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Server\\Server.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Server\\obj\\",
+        "projectPath": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Server\\Server.csproj",
+        "packagesPath": "C:\\Users\\פרידמן רבקה\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\פרידמן רבקה\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -186,16 +184,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj"
+              "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj": {
+                "projectPath": "C:\\Users\\פרידמן רבקה\\Downloads\\Music-Platform\\MusicPlatform\\Bl\\BL.csproj"
               }
             }
           }
@@ -252,7 +249,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
