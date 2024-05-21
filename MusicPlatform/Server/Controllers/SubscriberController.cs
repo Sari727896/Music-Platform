@@ -1,7 +1,6 @@
 ﻿using BL;
 using BL.BlApi;
 using BL.Bo;
-using Dal.DalApi;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Server.Controllers;

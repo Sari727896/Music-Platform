@@ -4,65 +4,62 @@ using BL.Bo;
 using System.Collections.Generic;
 using BL;
 
-namespace Server.Controllers
+namespace Server.Controllers;
+public class SongsController : BaseController
 {
-  
-    public class SongsController : BaseController
+    ISongRepoBl songRepoBl;
+    public SongsController(BLManager bLManager)
     {
-        ISongRepoBl songRepoBl;
-        public SongsController(BLManager bLManager)
+        this.songRepoBl = bLManager.Songs;
+    }
+    [HttpGet("api/songs")]
+    public ActionResult<List<Song>> Get()
+    {
+        if (songRepoBl.GetAll() == null)
+            return NotFound();
+        return songRepoBl.GetAll();
+    }
+    [HttpGet("api/publication-song")]
+    public ActionResult<Song> GetPublicationSong()
+    {
+        if(songRepoBl.GetPublicationSong == null)
         {
-            this.songRepoBl = bLManager.Songs;
+            return NotFound();
         }
-        [HttpGet("api/songs")]
-        public ActionResult<List<Song>> Get()
+        return songRepoBl.GetPublicationSong();
+    }
+    [HttpPost]
+    public ActionResult<Song> AddSong(Song song)
+    {
+        if (song == null)
         {
-            if (songRepoBl.GetAll() == null)
-                return NotFound();
-            return songRepoBl.GetAll();
+            return BadRequest();
         }
-        [HttpGet("api/publication-song")]
-        public ActionResult<Song> GetPublicationSong()
+        songRepoBl.Add(song);
+        return song;
+    }
+    [HttpPut("{songId}")]
+    public ActionResult<Song> UpdateSong([FromRoute] int songId, [FromBody]Song  song)
+    {
+        if (song == null)
         {
-            if(songRepoBl.GetPublicationSong == null)
-            {
-                return NotFound();
-            }
-            return songRepoBl.GetPublicationSong();
+            return BadRequest();
         }
-        [HttpPost]
-        public ActionResult<Song> AddSong(Song song)
-        {
-            if (song == null)
-            {
-                return BadRequest();
-            }
-            songRepoBl.Add(song);
-            return song;
-        }
-        [HttpPut("{songId}")]
-        public ActionResult<Song> UpdateSong([FromRoute] int songId, [FromBody]Song  song)
-        {
-            if (song == null)
-            {
-                return BadRequest();
-            }
 
-            if (songId < 0)
-            {
-                return BadRequest();
-            }
-
-            return songRepoBl.Update(song, songId);
-        }
-        [HttpDelete("{code}")]
-        public ActionResult<Song> DeleteSong(int code)
+        if (songId < 0)
         {
-            if (code < 0)
-            {
-                return BadRequest();
-            }
-            return songRepoBl.Delete(code);
+            return BadRequest();
         }
+
+        return songRepoBl.Update(song, songId);
+    }
+    [HttpDelete("{code}")]
+    public ActionResult<Song> DeleteSong(int code)
+    {
+        if (code < 0)
+        {
+            return BadRequest();
+        }
+        return songRepoBl.Delete(code);
     }
 }

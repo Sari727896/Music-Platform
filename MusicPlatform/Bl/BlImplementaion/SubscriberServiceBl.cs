@@ -34,13 +34,6 @@ public class SubscriberServiceBl : ISubscriberRepoBl
     }
     public Bo.Subscriber Add(Bo.Subscriber subscriber)
     {
-        //Dal.Do.Subscriber subscriber1 = new();
-        //subscriber1.Id = subscriber.Id;
-        //subscriber1.FirstName = subscriber.FirstName;
-        //subscriber1.LastName = subscriber.LastName;
-        //subscriberRepoDal.Add(subscriber1);
-        //return subscriber;
-
         Dal.Do.Subscriber subscriber1 = mapper.Map<Dal.Do.Subscriber>(subscriber);
         Dal.Do.Subscriber addsubscriber = subscriberRepoDal.Add(subscriber1);
         Bo.Subscriber addedBoSubscriber= mapper.Map<Bo.Subscriber>(addsubscriber);
@@ -49,11 +42,6 @@ public class SubscriberServiceBl : ISubscriberRepoBl
     public Bo.Subscriber Update(Bo.Subscriber subscriber, int somethingCode)
     {
         Dal.Do.Subscriber dalsubscriber = mapper.Map<Dal.Do.Subscriber>(subscriber);
-        //subscriber.Id = subscriber.Id;
-        //dalsubscriber.FirstName = subscriber.FirstName;
-        //dalsubscriber.LastName = subscriber.LastName;
-        //subscriberRepoDal.Update(dalsubscriber, somethimgCode);
-        //return subscriber;
         subscriberRepoDal.Update(dalsubscriber, somethingCode);
         Bo.Subscriber blSubscriber = mapper.Map<Bo.Subscriber>(dalsubscriber);
         return blSubscriber;
@@ -63,13 +51,9 @@ public class SubscriberServiceBl : ISubscriberRepoBl
     {
         Dal.Do.Subscriber dalsubscriber = subscriberRepoDal.Delete(code);
         Bo.Subscriber subscriber = mapper.Map<Bo.Subscriber>(dalsubscriber);
-        //subscriber.Id = dalsubscriber.Id;
-        //subscriber.FirstName = dalsubscriber.FirstName;
-        //subscriber.LastName = dalsubscriber.LastName;
         return subscriber;
       
     }
-
     public List<Bo.Song> GetSubscriberSongs(int subscriberId)
     {
         List<Bo.SubscriberSong> list = new();
@@ -93,6 +77,5 @@ public class SubscriberServiceBl : ISubscriberRepoBl
         }
         return subscriberSongs;
     }
-
 }
 

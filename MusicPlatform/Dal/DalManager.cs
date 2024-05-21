@@ -18,9 +18,6 @@ public class DalManager
     public ISubscriberRepoDal SubscribersRepo { get; set; }
     public DalManager(string connStr)
     {
-        //ServiceCollection collecion =new ServiceCollection();
-        //collecion
-
         ServiceCollection services = new ServiceCollection();
      
         services.AddSingleton<MusicContext>();
@@ -33,7 +30,5 @@ public class DalManager
         SingersRepo = servicesProvider.GetRequiredService<ISingerRepoDal>();
         SongsRepo = servicesProvider.GetRequiredService<ISongRepoDal>();
         SubscribersRepo = servicesProvider.GetRequiredService<ISubscriberRepoDal>();
-
     }
-
 }
