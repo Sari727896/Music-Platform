@@ -3,9 +3,9 @@ using BL.BlImplementaion;
 using Dal.DalApi;
 using Dal.Dalimplementaion;
 using Dal.Do;
-using Dal;
 using Microsoft.EntityFrameworkCore;
 using BL;
+using Server;
 
 var builder = WebApplication.CreateBuilder(args);
 
