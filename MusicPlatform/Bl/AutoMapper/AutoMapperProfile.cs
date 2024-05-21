@@ -23,17 +23,18 @@ namespace BL.AutoMapper
             CreateMap<Singer, Dal.Do.Singer>().ReverseMap();
 
             CreateMap<Song, Dal.Do.Song>()
-      .ForMember(dest => dest.ComposerName, opt => opt.MapFrom(src => GetComposerName(src)))
-      .ForMember(dest => dest.Description, opt => opt.MapFrom(src => GetDescription(src)))
-      .ForMember(dest=>dest.ProcessorName, opt => opt.MapFrom(src => GetProcessorName(src)))
-      .ForMember(dest=>dest.TheSongWriter, opt => opt.MapFrom(src => GetSongWriter(src)))
-      .ReverseMap();
+              .ForMember(dest => dest.ComposerName, opt => opt.MapFrom(src => GetComposerName(src)))
+              .ForMember(dest => dest.Description, opt => opt.MapFrom(src => GetDescription(src)))
+              .ForMember(dest=>dest.ProcessorName, opt => opt.MapFrom(src => GetProcessorName(src)))
+              .ForMember(dest=>dest.TheSongWriter, opt => opt.MapFrom(src => GetSongWriter(src)))
+              .ReverseMap();
 
 
             //    .ForMember(dest => dest.Singer, opt => opt.MapFrom(src => MapSinger(src.SingerName)));
 
             //CreateMap<Dal.Do.Song,Song>();
             CreateMap<Subscriber, Dal.Do.Subscriber>().ReverseMap();
+            CreateMap<SubscriberSong, Dal.Do.SubscriberSong>().ReverseMap();
             //Dal.Do.Singer MapSinger(string singerName)
             //{
             //    string[] nameParts = singerName.Split(' ');

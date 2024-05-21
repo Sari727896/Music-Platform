@@ -17,11 +17,12 @@ namespace BL.BlImplementaion;
 public class SubscriberServiceBl : ISubscriberRepoBl
 {
     ISubscriberRepoDal subscriberRepoDal;
-    ISongRepoBl songRepoBl;
+    ISongRepoDal songRepoDal;
     IMapper mapper;
     public SubscriberServiceBl(DalManager dalManager, IMapper mapper)
     {
         this.subscriberRepoDal =dalManager.SubscribersRepo;
+        this.songRepoDal = dalManager.SongsRepo;
         this.mapper = mapper;
     }
     public List<Bo.Subscriber> GetAll()
@@ -45,7 +46,7 @@ public class SubscriberServiceBl : ISubscriberRepoBl
         Bo.Subscriber addedBoSubscriber= mapper.Map<Bo.Subscriber>(addsubscriber);
         return addedBoSubscriber;
     }
-    public Bo.Subscriber Update(Bo.Subscriber subscriber, int somethimgCode)
+    public Bo.Subscriber Update(Bo.Subscriber subscriber, int somethingCode)
     {
         Dal.Do.Subscriber dalsubscriber = mapper.Map<Dal.Do.Subscriber>(subscriber);
         //subscriber.Id = subscriber.Id;
@@ -53,7 +54,7 @@ public class SubscriberServiceBl : ISubscriberRepoBl
         //dalsubscriber.LastName = subscriber.LastName;
         //subscriberRepoDal.Update(dalsubscriber, somethimgCode);
         //return subscriber;
-        subscriberRepoDal.Update(dalsubscriber, somethimgCode);
+        subscriberRepoDal.Update(dalsubscriber, somethingCode);
         Bo.Subscriber blSubscriber = mapper.Map<Bo.Subscriber>(dalsubscriber);
         return blSubscriber;
 
@@ -73,23 +74,21 @@ public class SubscriberServiceBl : ISubscriberRepoBl
     {
         List<Bo.SubscriberSong> list = new();
         var subscriberSongsId = subscriberRepoDal.GetSubscriberSongs(subscriberId);
+       
         foreach (var item in subscriberSongsId)
         {
-            Bo.SubscriberSong subscriberSong = new();
-            subscriberSong.Id = item.Id;
-            subscriberSong.SongId = item.SongId;
-            subscriberSong.SubscriberId = item.SubscriberId;
+            Bo.SubscriberSong subscriberSong = mapper.Map<Bo.SubscriberSong>(item);
             list.Add(subscriberSong);
         }
-
-        var songs = songRepoBl.GetAll();
+        var songs = songRepoDal.GetAll();
         List<Bo.Song> subscriberSongs = new();
         foreach (Bo.SubscriberSong s in list)
         {
             var song = songs.FirstOrDefault(song => song.Id == s.SongId);
             if (song != null)
             {
-                subscriberSongs.Add(song);
+                Bo.Song subscriberSong = mapper.Map<Bo.Song>(song);
+                subscriberSongs.Add(subscriberSong);
             }
         }
         return subscriberSongs;

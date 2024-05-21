@@ -138,3 +138,17 @@ C:\Users\פרידמן רבקה\Downloads\Music-Platform\MusicPlatform\Dal\obj\De
 C:\Users\פרידמן רבקה\Downloads\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.pdb
 C:\Users\פרידמן רבקה\Downloads\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
 C:\Users\פרידמן רבקה\Downloads\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\ref\Dal.dll
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.deps.json
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.dll
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\bin\Debug\net7.0\Dal.pdb
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.dll
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\refint\Dal.dll
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.pdb
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+H:\פרויקט סטאז\Music-Platform\MusicPlatform\Dal\obj\Debug\net7.0\ref\Dal.dll
