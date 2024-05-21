@@ -1,14 +1,10 @@
 using BL.BlApi;
 using BL.BlImplementaion;
-using Dal.DalApi;
-using Dal.Dalimplementaion;
-using Dal.Do;
 using Microsoft.EntityFrameworkCore;
 using BL;
 using Server;
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 // Add services to the container.
 builder.Services.AddControllers();
