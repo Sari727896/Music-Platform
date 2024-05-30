@@ -19,14 +19,14 @@ public class SongsController : BaseController
             return NotFound();
         return songRepoBl.GetAll();
     }
-    [HttpGet("api/publication-song")]
-    public ActionResult<Song> GetPublicationSong()
+    [HttpGet("api/publications-song")]
+    public ActionResult<List<Song>> GetPublicationSong()
     {
-        if(songRepoBl.GetPublicationSong == null)
+        if(songRepoBl.GetRecentSongs() == null)
         {
             return NotFound();
         }
-        return songRepoBl.GetPublicationSong();
+        return songRepoBl.GetRecentSongs();
     }
     [HttpPost]
     public ActionResult<Song> AddSong(Song song)

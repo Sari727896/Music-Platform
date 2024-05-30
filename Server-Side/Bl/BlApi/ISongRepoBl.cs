@@ -9,6 +9,6 @@ namespace BL.BlApi
 {
     public interface ISongRepoBl:IRepoBl<Song>
     {
-        public Song GetPublicationSong();
+        public List<Bo.Song> GetRecentSongs();
     }
 }

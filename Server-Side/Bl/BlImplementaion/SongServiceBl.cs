@@ -44,12 +44,18 @@ public class SongServiceBl : ISongRepoBl
         data.ForEach(s => listBl.Add(mapper.Map<Bo.Song>(s)));
         return listBl;
     }
-    public Bo.Song GetPublicationSong()
+    public List<Bo.Song> GetRecentSongs()
     {
-        DateTime lastDate = DateTime.MinValue;
-        var data = songRepo.GetAll();
-        Bo.Song lastSong =mapper.Map<Bo.Song>(data.OrderByDescending(s=>s.PublicationDate).FirstOrDefault());
-        return lastSong;
+        //to do Transfer the count to the permanent page
+        //int count = 6;
+        var recentSongs = songRepo
+            .GetAll()
+            .OrderByDescending(s => s.PublicationDate)
+            .Take(6)
+            .Select(song => mapper.Map<Bo.Song>(song))
+            .ToList();
+
+        return recentSongs;
     }
     public Bo.Song Update(Bo.Song song, int songCode)
     {
