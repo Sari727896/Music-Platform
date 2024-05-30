@@ -166,3 +166,17 @@ C:\Users\User\Desktop\Music Progect c#\Music-Platform\Server-Side\Dal\obj\Debug\
 C:\Users\User\Desktop\Music Progect c#\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\Dal.pdb
 C:\Users\User\Desktop\Music Progect c#\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
 C:\Users\User\Desktop\Music Progect c#\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\ref\Dal.dll
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\bin\Debug\net7.0\Dal.deps.json
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\bin\Debug\net7.0\Dal.runtimeconfig.json
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\bin\Debug\net7.0\Dal.dll
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\bin\Debug\net7.0\Dal.pdb
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\Dal.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\Dal.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\Dal.AssemblyInfo.cs
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\Dal.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\Dal.dll
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\refint\Dal.dll
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\Dal.pdb
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\Dal.genruntimeconfig.cache
+C:\Users\User\Desktop\אסתי\לימודים\Music-Platform\Server-Side\Dal\obj\Debug\net7.0\ref\Dal.dll
