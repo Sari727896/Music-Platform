@@ -19,7 +19,7 @@ public class SongsController : BaseController
             return NotFound();
         return songRepoBl.GetAll();
     }
-    [HttpGet("api/publications-song")]
+    [HttpGet("api/Current-songs")]
     public ActionResult<List<Song>> GetPublicationSong()
     {
         if(songRepoBl.GetRecentSongs() == null)
