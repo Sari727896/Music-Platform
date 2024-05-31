@@ -9,6 +9,7 @@ const SongList = () => {
     useEffect(() => {
         const fetchSongs = async () => {
             try {
+                debugger
                 const data = await getData();
                 setSongs(data);
                 setLoading(false);
@@ -30,6 +31,7 @@ const SongList = () => {
     }
 
     return (
+
         <div>
             <h2>All Songs</h2>
             {songs.length > 0 ? (
