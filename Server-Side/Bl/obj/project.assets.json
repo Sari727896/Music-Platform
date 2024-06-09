@@ -2704,11 +2704,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\אסתי\\לימודים\\Music-Platform\\Server-Side\\Bl\\BL.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\Server-Side\\Bl\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "C:\\Users\\User\\Desktop\\אסתי\\לימודים\\Music-Platform\\Server-Side\\Bl\\BL.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\Server-Side\\Bl\\BL.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\אסתי\\לימודים\\Music-Platform\\Server-Side\\Bl\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\Server-Side\\Bl\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2730,8 +2730,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\אסתי\\לימודים\\Music-Platform\\Server-Side\\Dal\\Dal.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\אסתי\\לימודים\\Music-Platform\\Server-Side\\Dal\\Dal.csproj"
+            "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\Server-Side\\Dal\\Dal.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\Server-Side\\Dal\\Dal.csproj"
             }
           }
         }
@@ -2771,7 +2771,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

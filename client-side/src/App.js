@@ -1,15 +1,12 @@
+import logo from './logo.svg';
 import './App.css';
-import SongList from './components/SongList';
+import Songs from './components/Songs';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <div>
-            <h1>Music Platform</h1>
-            <SongList />
-        </div>
-
+       <Songs></Songs>
       </header>
     </div>
   );
