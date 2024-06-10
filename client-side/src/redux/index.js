@@ -1,11 +1,9 @@
 import { combineReducers } from "redux";
+import singersReducer from "./reducers/singerReducer";
 
 const allReducers = combineReducers(
     {
-        songReducer: songsReducer,
-        userReducer: usersReducer,
-        playlistReducer: playlistsReducer,
-        albumReducer: albumsReducer,
+        singersReducer:singersReducer,
     }
 )
 export default allReducers

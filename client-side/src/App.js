@@ -1,13 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import Songs from './components/Songs';
-
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import Singers from './components/Singers';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       <Songs></Songs>
-      </header>
+      {/* <header className="App-header">
+        
+      </header> */}
+      <Provider store={store}>
+        <Singers></Singers>
+      </Provider>
     </div>
   );
 }

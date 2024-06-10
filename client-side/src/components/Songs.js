@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getItems } from '../songsApi';
+import { getItems } from '../api/songsApi';
 
 export default function Songs() {
 
