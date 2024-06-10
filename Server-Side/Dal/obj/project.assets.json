@@ -2952,11 +2952,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\Server-Side\\Dal\\Dal.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\אסתי\\לימודים\\Music-Platform\\Server-Side\\Dal\\Dal.csproj",
       "projectName": "Dal",
-      "projectPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\Server-Side\\Dal\\Dal.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\אסתי\\לימודים\\Music-Platform\\Server-Side\\Dal\\Dal.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Music Progect c#\\Music-Platform\\Server-Side\\Dal\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\אסתי\\לימודים\\Music-Platform\\Server-Side\\Dal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3031,7 +3031,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
