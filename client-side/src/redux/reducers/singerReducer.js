@@ -1,5 +1,5 @@
 const initialState = {
-  singers: [], // המערך של הזמרים
+  singers: [], 
 };
 
 const singersReducer = (state = initialState, action) => {
@@ -7,7 +7,7 @@ const singersReducer = (state = initialState, action) => {
     case 'FETCH_SINGERS_SUCCESS':
       return {
         ...state,
-        singers: [ ...action.singers], // הוספת הנתונים מה-action לסוף המערך הקיים
+        singers: [ ...action.singers], 
       };
     default:
       return state;

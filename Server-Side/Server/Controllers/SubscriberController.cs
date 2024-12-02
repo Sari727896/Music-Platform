@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Server.Controllers;
 
-public class SubscriberController:BaseController
+public class SubscriberController : BaseController
 {
     ISubscriberRepoBl subscriberRepoBl;
     public SubscriberController(BLManager bLManager)
@@ -30,7 +30,7 @@ public class SubscriberController:BaseController
     }
 
     [HttpPut("{subscriberId}")]
-    public ActionResult<Subscriber> UpdateSinger([FromRoute] int subscriberId, [FromBody]Subscriber subscriber)
+    public ActionResult<Subscriber> UpdateSinger([FromRoute] int subscriberId, [FromBody] Subscriber subscriber)
     {
         if (subscriber == null)
             return BadRequest();

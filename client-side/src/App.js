@@ -6,9 +6,6 @@ import Singers from './components/Singers';
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        
-      </header> */}
       <Provider store={store}>
         <Singers></Singers>
       </Provider>

@@ -34,7 +34,7 @@ public class SongServiceBl : ISongRepoBl
     public Bo.Song Delete(int code)
     {
         Dal.Do.Song dalsong = songRepo.Delete(code);
-        Bo.Song song =mapper.Map<Bo.Song>(dalsong);
+        Bo.Song song = mapper.Map<Bo.Song>(dalsong);
         return song;
     }
     public List<Bo.Song> GetAll()
@@ -46,8 +46,7 @@ public class SongServiceBl : ISongRepoBl
     }
     public List<Bo.Song> GetRecentSongs()
     {
-        //to do Transfer the count to the permanent page
-        //int count = 6;
+
         var recentSongs = songRepo
             .GetAll()
             .OrderByDescending(s => s.PublicationDate)
@@ -59,9 +58,9 @@ public class SongServiceBl : ISongRepoBl
     }
     public Bo.Song Update(Bo.Song song, int songCode)
     {
-        Dal.Do.Song dalsong =mapper.Map<Dal.Do.Song>(song);
+        Dal.Do.Song dalsong = mapper.Map<Dal.Do.Song>(song);
         songRepo.Update(dalsong, songCode);
-        Bo.Song blsong=mapper.Map<Bo.Song>(dalsong);
+        Bo.Song blsong = mapper.Map<Bo.Song>(dalsong);
         return blsong;
     }
 }

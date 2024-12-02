@@ -9,7 +9,7 @@ namespace BL.Bo
 {
     public class Singer
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
 
         public string FirstName { get; set; } = null!;
 
@@ -17,6 +17,6 @@ namespace BL.Bo
 
         public int? Age { get; set; }
         public string Description { get; set; }
-  
+
     }
 }

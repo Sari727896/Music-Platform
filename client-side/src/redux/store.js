@@ -4,7 +4,7 @@ import allReducers from '../redux/index';
 
 const store = createStore(
   allReducers,
-  applyMiddleware(thunk) // הוספת thunk כ-middleWare
+  applyMiddleware(thunk) 
 );
 
 store.getState();

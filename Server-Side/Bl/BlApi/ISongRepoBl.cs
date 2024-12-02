@@ -7,7 +7,7 @@ using BL.Bo;
 
 namespace BL.BlApi
 {
-    public interface ISongRepoBl:IRepoBl<Song>
+    public interface ISongRepoBl : IRepoBl<Song>
     {
         public List<Bo.Song> GetRecentSongs();
     }

@@ -22,7 +22,7 @@ public class SongsController : BaseController
     [HttpGet("api/Current-songs")]
     public ActionResult<List<Song>> GetPublicationSong()
     {
-        if(songRepoBl.GetRecentSongs() == null)
+        if (songRepoBl.GetRecentSongs() == null)
         {
             return NotFound();
         }
@@ -39,7 +39,7 @@ public class SongsController : BaseController
         return song;
     }
     [HttpPut("{songId}")]
-    public ActionResult<Song> UpdateSong([FromRoute] int songId, [FromBody]Song  song)
+    public ActionResult<Song> UpdateSong([FromRoute] int songId, [FromBody] Song song)
     {
         if (song == null)
         {

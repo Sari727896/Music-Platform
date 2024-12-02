@@ -11,7 +11,7 @@ public class SingersController : BaseController
     ISingerRepoBl singerRepoBl;
     public SingersController(BLManager bLManager)
     {
-        this.singerRepoBl =bLManager.Singers;
+        this.singerRepoBl = bLManager.Singers;
     }
     [HttpGet]
     public ActionResult<List<Singer>> GetSingers()
@@ -39,7 +39,7 @@ public class SingersController : BaseController
         singerRepoBl.Add(singer);
         return singer;
     }
- 
+
     [HttpPut("{singerId}")]
     public ActionResult<Singer> UpdateSinger([FromRoute] int singerId, [FromBody] Singer singer)
     {

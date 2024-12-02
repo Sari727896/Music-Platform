@@ -19,11 +19,11 @@ public class DalManager
     public DalManager(string connStr)
     {
         ServiceCollection services = new ServiceCollection();
-     
+
         services.AddSingleton<MusicContext>();
         services.AddScoped<ISingerRepoDal, SingerRepo>();
         services.AddScoped<ISongRepoDal, SongRepo>();
-        services.AddScoped<ISubscriberRepoDal,SubscriberRepo>();
+        services.AddScoped<ISubscriberRepoDal, SubscriberRepo>();
         services.AddDbContext<MusicContext>(opt => opt.UseSqlServer(connStr));
         ServiceProvider servicesProvider = services.BuildServiceProvider();
 

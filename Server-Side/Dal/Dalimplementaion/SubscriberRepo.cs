@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Dalimplementaion;
 
-public class SubscriberRepo:ISubscriberRepoDal
+public class SubscriberRepo : ISubscriberRepoDal
 {
     MusicContext musicContext;
     public SubscriberRepo(MusicContext musicContext)

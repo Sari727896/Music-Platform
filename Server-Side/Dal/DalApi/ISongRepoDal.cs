@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dal.DalApi
 {
-    public interface ISongRepoDal:IRepo<Song>
+    public interface ISongRepoDal : IRepo<Song>
     {
     }
 }

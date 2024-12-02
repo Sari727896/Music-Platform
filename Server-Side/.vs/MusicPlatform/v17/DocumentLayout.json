@@ -1,0 +1,511 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\server\\dbactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|solutionrelative:server\\dbactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\server\\controllers\\subscribercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|solutionrelative:server\\controllers\\subscribercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\server\\controllers\\songscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|solutionrelative:server\\controllers\\songscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\server\\controllers\\singerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|solutionrelative:server\\controllers\\singerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\server\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|solutionrelative:server\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\dal\\dalmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|solutionrelative:dal\\dalmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\dal\\dalimplementaion\\subscriberrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|solutionrelative:dal\\dalimplementaion\\subscriberrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\dal\\dalimplementaion\\songrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|solutionrelative:dal\\dalimplementaion\\songrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\dal\\dalimplementaion\\singerrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|solutionrelative:dal\\dalimplementaion\\singerrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\dal\\dalapi\\isubscriberrepodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|solutionrelative:dal\\dalapi\\isubscriberrepodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\dal\\dalapi\\isongrepodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|solutionrelative:dal\\dalapi\\isongrepodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\dal\\dalapi\\isingerrepodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|solutionrelative:dal\\dalapi\\isingerrepodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\dal\\dalapi\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0C0DDCC-7ECF-420B-8DE1-293E291C92E1}|Dal\\Dal.csproj|solutionrelative:dal\\dalapi\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\blmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\blmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\bo\\subscribersong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\bo\\subscribersong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\bo\\subscriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\bo\\subscriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\bo\\song.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\bo\\song.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\bo\\singer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\bo\\singer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\blimplementaion\\subscriberservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\blimplementaion\\subscriberservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\blimplementaion\\songservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\blimplementaion\\songservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\blimplementaion\\singerservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\blimplementaion\\singerservicebl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\blapi\\isubscriberrepobl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\blapi\\isubscriberrepobl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\blapi\\isongrepobl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\blapi\\isongrepobl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\blapi\\isingerrepobl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\blapi\\isingerrepobl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\blapi\\irepobl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\blapi\\irepobl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\bl\\automapper\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C497268C-6C2F-450F-9D95-6BC0517CBFF0}|Bl\\BL.csproj|solutionrelative:bl\\automapper\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|solutionrelative:server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|c:\\users\\user\\downloads\\music-platform\\server-side\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5E57B234-A24D-4A11-8137-ED7EC28CC531}|Server\\Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 28,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SubscriberController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Controllers\\SubscriberController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\SubscriberController.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Controllers\\SubscriberController.cs",
+              "RelativeToolTip": "Server\\Controllers\\SubscriberController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:35:37.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SingersController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Controllers\\SingersController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\SingersController.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Controllers\\SingersController.cs",
+              "RelativeToolTip": "Server\\Controllers\\SingersController.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:35:28.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "Server\\Controllers\\BaseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:35:23.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DalManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\DalManager.cs",
+              "RelativeDocumentMoniker": "Dal\\DalManager.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\DalManager.cs",
+              "RelativeToolTip": "Dal\\DalManager.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAkwCAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:35:15.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SubscriberRepo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\Dalimplementaion\\SubscriberRepo.cs",
+              "RelativeDocumentMoniker": "Dal\\Dalimplementaion\\SubscriberRepo.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\Dalimplementaion\\SubscriberRepo.cs",
+              "RelativeToolTip": "Dal\\Dalimplementaion\\SubscriberRepo.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:35:02.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SongRepo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\Dalimplementaion\\SongRepo.cs",
+              "RelativeDocumentMoniker": "Dal\\Dalimplementaion\\SongRepo.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\Dalimplementaion\\SongRepo.cs",
+              "RelativeToolTip": "Dal\\Dalimplementaion\\SongRepo.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:34:58.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SingerRepo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\Dalimplementaion\\SingerRepo.cs",
+              "RelativeDocumentMoniker": "Dal\\Dalimplementaion\\SingerRepo.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\Dalimplementaion\\SingerRepo.cs",
+              "RelativeToolTip": "Dal\\Dalimplementaion\\SingerRepo.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAkwDEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:34:52.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ISubscriberRepoDal.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\DalApi\\ISubscriberRepoDal.cs",
+              "RelativeDocumentMoniker": "Dal\\DalApi\\ISubscriberRepoDal.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\DalApi\\ISubscriberRepoDal.cs",
+              "RelativeToolTip": "Dal\\DalApi\\ISubscriberRepoDal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:34:46.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ISongRepoDal.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\DalApi\\ISongRepoDal.cs",
+              "RelativeDocumentMoniker": "Dal\\DalApi\\ISongRepoDal.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\DalApi\\ISongRepoDal.cs",
+              "RelativeToolTip": "Dal\\DalApi\\ISongRepoDal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:34:42.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ISingerRepoDal.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\DalApi\\ISingerRepoDal.cs",
+              "RelativeDocumentMoniker": "Dal\\DalApi\\ISingerRepoDal.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\DalApi\\ISingerRepoDal.cs",
+              "RelativeToolTip": "Dal\\DalApi\\ISingerRepoDal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:34:37.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IRepo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\DalApi\\IRepo.cs",
+              "RelativeDocumentMoniker": "Dal\\DalApi\\IRepo.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Dal\\DalApi\\IRepo.cs",
+              "RelativeToolTip": "Dal\\DalApi\\IRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:34:34.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BLManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BLManager.cs",
+              "RelativeDocumentMoniker": "Bl\\BLManager.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BLManager.cs",
+              "RelativeToolTip": "Bl\\BLManager.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAkwCAAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:34:24.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SubscriberSong.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\Bo\\SubscriberSong.cs",
+              "RelativeDocumentMoniker": "Bl\\Bo\\SubscriberSong.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\Bo\\SubscriberSong.cs",
+              "RelativeToolTip": "Bl\\Bo\\SubscriberSong.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:34:18.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Subscriber.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\Bo\\Subscriber.cs",
+              "RelativeDocumentMoniker": "Bl\\Bo\\Subscriber.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\Bo\\Subscriber.cs",
+              "RelativeToolTip": "Bl\\Bo\\Subscriber.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:34:13.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Singer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\Bo\\Singer.cs",
+              "RelativeDocumentMoniker": "Bl\\Bo\\Singer.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\Bo\\Singer.cs",
+              "RelativeToolTip": "Bl\\Bo\\Singer.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:34:05.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SubscriberServiceBl.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlImplementaion\\SubscriberServiceBl.cs",
+              "RelativeDocumentMoniker": "Bl\\BlImplementaion\\SubscriberServiceBl.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlImplementaion\\SubscriberServiceBl.cs",
+              "RelativeToolTip": "Bl\\BlImplementaion\\SubscriberServiceBl.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAswFEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:33:57.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ISubscriberRepoBl.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlApi\\ISubscriberRepoBl.cs",
+              "RelativeDocumentMoniker": "Bl\\BlApi\\ISubscriberRepoBl.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlApi\\ISubscriberRepoBl.cs",
+              "RelativeToolTip": "Bl\\BlApi\\ISubscriberRepoBl.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:33:21.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ISingerRepoBl.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlApi\\ISingerRepoBl.cs",
+              "RelativeDocumentMoniker": "Bl\\BlApi\\ISingerRepoBl.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlApi\\ISingerRepoBl.cs",
+              "RelativeToolTip": "Bl\\BlApi\\ISingerRepoBl.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:33:13.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IRepoBl.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlApi\\IRepoBl.cs",
+              "RelativeDocumentMoniker": "Bl\\BlApi\\IRepoBl.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlApi\\IRepoBl.cs",
+              "RelativeToolTip": "Bl\\BlApi\\IRepoBl.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAzwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:33:09.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AutoMapperProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\AutoMapper\\AutoMapperProfile.cs",
+              "RelativeDocumentMoniker": "Bl\\AutoMapper\\AutoMapperProfile.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\AutoMapper\\AutoMapperProfile.cs",
+              "RelativeToolTip": "Bl\\AutoMapper\\AutoMapperProfile.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAowC0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:32:58.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SingerServiceBl.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlImplementaion\\SingerServiceBl.cs",
+              "RelativeDocumentMoniker": "Bl\\BlImplementaion\\SingerServiceBl.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlImplementaion\\SingerServiceBl.cs",
+              "RelativeToolTip": "Bl\\BlImplementaion\\SingerServiceBl.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:32:53.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Server\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Server\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-02T21:32:53.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\appsettings.json",
+              "RelativeDocumentMoniker": "Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\appsettings.json",
+              "RelativeToolTip": "Server\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-02T21:32:53.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ISongRepoBl.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlApi\\ISongRepoBl.cs",
+              "RelativeDocumentMoniker": "Bl\\BlApi\\ISongRepoBl.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlApi\\ISongRepoBl.cs",
+              "RelativeToolTip": "Bl\\BlApi\\ISongRepoBl.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAMwAsAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:32:53.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Song.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\Bo\\Song.cs",
+              "RelativeDocumentMoniker": "Bl\\Bo\\Song.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\Bo\\Song.cs",
+              "RelativeToolTip": "Bl\\Bo\\Song.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:32:53.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SongsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Controllers\\SongsController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\SongsController.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Controllers\\SongsController.cs",
+              "RelativeToolTip": "Server\\Controllers\\SongsController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAzwAoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:32:53.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SongServiceBl.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlImplementaion\\SongServiceBl.cs",
+              "RelativeDocumentMoniker": "Bl\\BlImplementaion\\SongServiceBl.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Bl\\BlImplementaion\\SongServiceBl.cs",
+              "RelativeToolTip": "Bl\\BlImplementaion\\SongServiceBl.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAswDAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:32:53.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBActions.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\DBActions.cs",
+              "RelativeDocumentMoniker": "Server\\DBActions.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\DBActions.cs",
+              "RelativeToolTip": "Server\\DBActions.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwCYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:32:53.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Server\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Downloads\\Music-Platform\\Server-Side\\Server\\Program.cs",
+              "RelativeToolTip": "Server\\Program.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T21:32:53.667Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

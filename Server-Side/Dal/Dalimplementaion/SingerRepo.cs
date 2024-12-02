@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Dal.Dalimplementaion;
 
-public class SingerRepo:ISingerRepoDal
+public class SingerRepo : ISingerRepoDal
 {
     MusicContext musicContext;
     public SingerRepo(MusicContext musicContext)
@@ -48,5 +48,5 @@ public class SingerRepo:ISingerRepoDal
             return singerToDelete;
         }
         return null;
-    }     
+    }
 }

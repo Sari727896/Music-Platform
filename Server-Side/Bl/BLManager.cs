@@ -21,7 +21,7 @@ public class BLManager
     public BLManager(string connStr)
     {
         ServiceCollection services = new ServiceCollection();
-     
+
         services.AddAutoMapper(typeof(AutoMapper.AutoMapperProfile));
 
 
@@ -30,8 +30,8 @@ public class BLManager
         services.AddScoped<ISongRepoBl, SongServiceBl>();
         services.AddScoped<ISubscriberRepoBl, SubscriberServiceBl>();
 
-        ServiceProvider provider = services.BuildServiceProvider();  
-   
+        ServiceProvider provider = services.BuildServiceProvider();
+
         Singers = provider.GetRequiredService<ISingerRepoBl>();
         Songs = provider.GetRequiredService<ISongRepoBl>();
         Subscribers = provider.GetRequiredService<ISubscriberRepoBl>();

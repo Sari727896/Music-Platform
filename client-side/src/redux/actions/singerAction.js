@@ -14,7 +14,6 @@ export const fetchSingers = () => {
       dispatch(fetchSingersSuccess(singersWithImages));
     } catch (error) {
       console.error("Error fetching singers:", error);
-      // Optionally dispatch a failure action here
     }
   };
 };

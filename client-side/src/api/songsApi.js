@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://localhost:7279/api'; // שנה את הכתובת בהתאם לכתובת השרת שלך
+const API_URL = 'https://localhost:7279/api'; 
 
 export const getItems = async () => {
   try {

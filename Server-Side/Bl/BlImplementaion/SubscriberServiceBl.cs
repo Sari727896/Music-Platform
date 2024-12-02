@@ -21,7 +21,7 @@ public class SubscriberServiceBl : ISubscriberRepoBl
     IMapper mapper;
     public SubscriberServiceBl(DalManager dalManager, IMapper mapper)
     {
-        this.subscriberRepoDal =dalManager.SubscribersRepo;
+        this.subscriberRepoDal = dalManager.SubscribersRepo;
         this.songRepoDal = dalManager.SongsRepo;
         this.mapper = mapper;
     }
@@ -36,7 +36,7 @@ public class SubscriberServiceBl : ISubscriberRepoBl
     {
         Dal.Do.Subscriber subscriber1 = mapper.Map<Dal.Do.Subscriber>(subscriber);
         Dal.Do.Subscriber addsubscriber = subscriberRepoDal.Add(subscriber1);
-        Bo.Subscriber addedBoSubscriber= mapper.Map<Bo.Subscriber>(addsubscriber);
+        Bo.Subscriber addedBoSubscriber = mapper.Map<Bo.Subscriber>(addsubscriber);
         return addedBoSubscriber;
     }
     public Bo.Subscriber Update(Bo.Subscriber subscriber, int somethingCode)
@@ -52,13 +52,13 @@ public class SubscriberServiceBl : ISubscriberRepoBl
         Dal.Do.Subscriber dalsubscriber = subscriberRepoDal.Delete(code);
         Bo.Subscriber subscriber = mapper.Map<Bo.Subscriber>(dalsubscriber);
         return subscriber;
-      
+
     }
     public List<Bo.Song> GetSubscriberSongs(int subscriberId)
     {
         List<Bo.SubscriberSong> list = new();
         var subscriberSongsId = subscriberRepoDal.GetSubscriberSongs(subscriberId);
-       
+
         foreach (var item in subscriberSongsId)
         {
             Bo.SubscriberSong subscriberSong = mapper.Map<Bo.SubscriberSong>(item);
